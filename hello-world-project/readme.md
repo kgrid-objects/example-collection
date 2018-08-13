@@ -10,11 +10,12 @@ The following structure is not an requirement or enforced, it is a recommendatio
 on what the JavaScript and in particular Node community at large have been following by convention.
 
 ### Directories
+
 * **naan-name/** is intended for each knowledge object (e.g. _hello-world_)
 * **tests/** is for all of your project test scripts
-* **etc/** is a sub-directory for meciellaiouns project 
+* **etc/** is a sub-directory for miscellaneous project
 * **docs/** is a sub-directory for more detailed information about these KOs
-* **dist/** is for zip kkos prouce using the npm package command
+* **dist/** is created and destroyed when running ```npm run package``` 
 * **scripts/** is intended to capture various scripts need for the project (using [scripty](https://www.npmjs.com/package/scripty))
 * **scriptswin/** windows versions of the scripts
 
