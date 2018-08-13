@@ -1,17 +1,10 @@
 {
     "title":"Hello, World",
-    "description":"description",
+    "description":"Simple KGrid KO development project that can be a great starting point for KO development",
     "arkId":"ark:/hello/world",
-    "citations":["https://citationlink"],
-    "keywords":"Keywords",
+    "citations":["https://en.wikipedia.org/wiki/%22Hello,_World!%22_program"],
     "owners":"KGRID",
-    "contributors":"KGRID TEAM",
-    "license":{"licenseName":"","licenseLink":""},
-    "url":"http://url",
-    "published":false,
     "version":"v0.0.1",
-    "lastModified":0,
-    "createdOn":0,
     "model": "model",
     "service":"model/service/servicedescriptor.yaml"
 }
