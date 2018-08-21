@@ -58,7 +58,7 @@ npm run package
 * [rewire](https://github.com/jhnns/rewire)
 
 ## Example Projects 
-* [Hello World Project](hello-world-project) - Simple project with one hello-world KO.  This is designed
+* [Hello World Project](hello-world) - Simple project with one hello-world KO.  This is designed
  as a starting point. Demostrates a project structure the includes unit testing and scripts to package
  the KO deposit.
 
