@@ -3,7 +3,7 @@
 # Setup
 rm -rf dist
 mkdir -p dist
-cp -r hello-world dist
+for i in $(ls -d *-*/); do cp -r ${i%%/} dist; done
 
 # create zip for each ko
 cd dist
@@ -14,3 +14,4 @@ done
 
 # clean up only leaving zip files
 rm -r */
+
