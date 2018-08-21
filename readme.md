@@ -9,7 +9,7 @@ of the grid, good development practices and useful tools.
   * [Testing](#testing)
   * [Package](#package)
   * [Tools](#tools)
-- [Projects](#projects)  
+- [Example Projects](#example-projects)  
 
 ## Anatomy of this Knowledge Object project.
 The following structure is not an requirement or enforced, it is a recommendation based 
@@ -57,7 +57,7 @@ npm run package
 * [jest](https://jestjs.io/) 
 * [rewire](https://github.com/jhnns/rewire)
 
-## Projects 
+## Example Projects 
 * [Hello World Project](hello-world-project) - Simple project with one hello-world KO.  This is designed
  as a starting point. Demostrates a project structure the includes unit testing and scripts to package
  the KO deposit.
