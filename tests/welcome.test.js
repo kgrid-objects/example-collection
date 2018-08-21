@@ -1,7 +1,7 @@
 var rewire = require('rewire');
 
 //Get load in the js
-var javascript = rewire('..//hello-world/v0.0.1/model/resource/welcome.js');
+var javascript = rewire('../hello-world/v0.0.1/model/resource/welcome.js');
 
 //Load in the function
 var welcome = javascript.__get__("welcome");
