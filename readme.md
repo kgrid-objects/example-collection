@@ -9,7 +9,7 @@ of the grid, good development practices and useful tools.
   * [Testing](#testing)
   * [Package](#package)
   * [Tools](#tools)
-- [Example Projects](#example-projects)  
+- [Example Knowledage](#example-knowledge-object )  
 
 ## Anatomy of this Knowledge Object project.
 The following structure is not an requirement or enforced, it is a recommendation based 
@@ -57,16 +57,15 @@ npm run package
 * [jest](https://jestjs.io/) 
 * [rewire](https://github.com/jhnns/rewire)
 
-## Example Projects 
-* [Hello World Project](hello-world) - Simple project with one hello-world KO.  This is designed
- as a starting point. Demostrates a project structure the includes unit testing and scripts to package
- the KO deposit.
+## Example Knowledge Object 
+ * [Hello World](hello-world) - Simple KO designed as a starting point. Demostrates a project structure the includes unit testing and scripts to package the KO deposit.
+ * [BMI Calaculator](ri-bmicalc) -  Simple KO designed to caluclate BMI based on height and weight.  Demostrates passing mulitple attributes. 
+ * [Minimum Viable](mvo-kgrid) -  Simple KO designed demostrate the smallest amount of information needed to get KO
 
 ## List of other awesome KGrid Knowledge Object projects
 Other interesting collections
 
 * [Cancer Risk](https://github.com/kgrid-objects/cancer-risk)- Knowledge Objects of Cancer risk 
 predictive models and risk score interpretations
-
 * [Opioid Collection](https://github.com/kgrid-objects/mopen-opioid-collection) - This is a collection 
 of KOs for KGrid that can be used to identify and report on certain features of opioid prescribing
