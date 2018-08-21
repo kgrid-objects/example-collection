@@ -3,24 +3,21 @@ This repository contains a collection of KGrid Knowledge Objects that demonstrat
 of the grid, good development practices and useful tools.
 
 
-- [Knowledge Object Anatomy](#heading-1)
+- [Knowledge Object Project Anatomy](#anatomy-of-this-knowledge-object-project)
   * [Prerequisites](#rerequisites)
   * [Directories](#directories)
   * [Testing](#testing)
   * [Package](#package)
   * [Tools](#tools)
-  
 - [Projects](#projects)  
 
 ## Anatomy of this Knowledge Object project.
 The following structure is not an requirement or enforced, it is a recommendation based 
 on what the JavaScript and in particular Node community at large have been following by convention.
 
-
 ### Prerequisites
 There are testing and packaging features in this project that require npm, npm is installed with Node.js
 [npm](https://www.npmjs.com/get-npm).  Once npm is installed run  ```npm install``` at the root of this project.
-
 
 ### Directories
 
