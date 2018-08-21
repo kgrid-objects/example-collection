@@ -59,7 +59,7 @@ npm run package
 
 ## Example Knowledge Objects 
  * [Hello World](hello-world) - Simple KO designed as a starting point. Demostrates a project structure the includes unit testing and scripts to package the KO deposit.
- * [BMI Calaculator](ri-bmicalc) -  Simple KO designed to caluclate BMI based on height and weight.  Demostrates passing mulitple attributes. 
+ * [BMI Calculator](ri-bmicalc) -  Simple KO designed to calculate BMI based on height and weight.  Demostrates passing mulitple attributes. 
  * [Minimum Viable](mvo-kgrid) -  Simple KO designed demostrate the smallest amount of information needed to get KO
 
 ## List of other awesome KGrid Knowledge Object projects
