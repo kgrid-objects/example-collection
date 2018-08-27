@@ -41,7 +41,7 @@ the tests directory.  You can execute the tests via npm
 npm test
 ```
 
-### Running Example KOs in Activator
+### Running Example KOs in an Activator
 The activator can look in any directory for KOs.  We can point a local instance of the activator to our cloned _example-kos_
 for development and testing.
 
