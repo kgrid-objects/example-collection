@@ -7,6 +7,7 @@ of the grid, good development practices and useful tools.
   * [Prerequisites](#rerequisites)
   * [Directories](#directories)
   * [Testing](#testing)
+  * [Running Example KOs in an Activator](#running-example-kos-in-an-activator)
   * [Package](#package)
   * [Tools](#tools)
 - [Example Knowledage Objects](#example-knowledge-objects )  
