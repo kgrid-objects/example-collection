@@ -48,10 +48,10 @@ for development and testing.
 1. Clone this repository ```git clone https://github.com/kgrid-objects/example-kos.git```
 1. Download the latest activator jar from [GitHub Latest Activator Release](https://github.com/kgrid/kgrid-activator/releases/latest).  
 
-Now we will need to start the activator and use the _example ko_ repostory as the shelf location (activator defaults to a relitive _shelf_).  The activator looks in the shelf for KOs. The activator uses a directory name pattern *-*.  Therefore the activator will discovery the hello-world, mvo-kgrid, ri-bmicalc KOs. Here is an example:
+Now we will need to start the activator and use the _example ko_ repostory as the shelf location (the activator defaults to a relative _shelf_ location but can be configured).  The activator uses a directory name pattern *-* in order to identify KOs.  Therefore the activator will discovery the hello-world, mvo-kgrid, ri-bmicalc KOs with _example-kos_ as the shelf. Here is an example:
 
-1. You have downloaded the latest activator into you user directory _/Users/barney/kgrid-activator-0.6.6.jar_
-1. You have cloned the example-kos repostory to your user directory _/Users/barney/example-kos_
+1. You have downloaded the latest activator into your user directory _/Users/barney/kgrid-activator-0.6.6.jar_
+1. You have cloned the example-kos repostory into your user directory _/Users/barney/example-kos_
 1. Now navigate to the your user directory and start the activator 
 
 ```
