@@ -56,7 +56,7 @@ Now we will need to start the activator and use the _example ko_ repostory as th
 1. Now navigate to the your user directory and start the activator 
 
 ```
-java -jar kgrid-activator-#.#.#.jar --kgrid.shelf.cdostore.url=filesystem:file:///Users/barney/example-kos
+java -jar kgrid-activator-0.6.6.jar --kgrid.shelf.cdostore.url=filesystem:file:///Users/barney/example-kos
 ```
 
 This tells the activator to scan the shelf at /Users/barney/example-kos for possible KOs using the *-* directory path pattern.  You will notice the activator will log entites that it was unable to read or activate. 
