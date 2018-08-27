@@ -42,8 +42,23 @@ npm test
 ```
 
 ### Running Example KOs in Activator
-get activator
-point shelf to 
+The activator can look in any directory for KOs.  We can point a local instance of the activator to our cloned _example-kos_
+for development and testing.
+
+1. Clone this repository ```git clone https://github.com/kgrid-objects/example-kos.git```
+1. Download the latest activator jar from [GitHub Latest Activator Release](https://github.com/kgrid/kgrid-activator/releases/latest).  
+
+Now we will need to start the activator and use the _example ko_ repostory as the shelf location (activator defaults to a relitive _shelf_).  The activator looks in the shelf for KOs. The activator uses a directory name pattern *-*.  Therefore the activator will discovery the hello-world, mvo-kgrid, ri-bmicalc KOs. Here is an example:
+
+1. You have downloaded the latest activator into you user directory _/Users/barney/kgrid-activator-0.6.6.jar_
+1. You have cloned the example-kos repostory to your user directory _/Users/barney/example-kos_
+1. Now navigate to the your user directory and start the activator 
+
+```
+java -jar kgrid-activator-#.#.#.jar --kgrid.shelf.cdostore.url=filesystem:file:///Users/barney/example-kos
+```
+
+This tells the activator to scan the shelf at /Users/barney/example-kos for possible KOs using the *-* directory path pattern.  You will notice the activator will log entites that it was unable to read or activate. 
 
 ### Package 
 
