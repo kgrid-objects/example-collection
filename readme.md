@@ -41,6 +41,10 @@ the tests directory.  You can execute the tests via npm
 npm test
 ```
 
+### Running Example KOs in Activator
+get activator
+point shelf to 
+
 ### Package 
 
 You can create zip file of the Knowledge Object which can be used to deposit to a KGrid 
