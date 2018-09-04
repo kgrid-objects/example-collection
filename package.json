@@ -22,7 +22,15 @@
     "rewire": "^4.0.1",
     "scripty": "^1.7.2"
   },
+  "scripts": {
+    "test": "jest",
+    "dev": "scripty"
+  },
   "jest": {
-    "verbose": true
+    "verbose": false
+  },
+  "dependencies": {
+    "jq-cli-wrapper": "^1.0.2",
+    "download-cli": "^1.1.1"
   }
 }
