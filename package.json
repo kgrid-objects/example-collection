@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "quick start for kgrid knowledge objects",
   "main": " ",
-  "scripts": {
-    "test": "jest",
-    "package": "scripty"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kgrid-objects/quick-start.git"
@@ -24,7 +20,8 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "scripty"
+    "dev": "scripty",
+    "package": "scripty"
   },
   "jest": {
     "verbose": false
