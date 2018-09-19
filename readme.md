@@ -1,6 +1,7 @@
 This repository contains a collection of KGrid Knowledge Objects that demonstrate features 
 of the grid, good development practices and useful tools.
 
+## Table of Contents
 - [Knowledge Object Project Anatomy](#anatomy-of-this-knowledge-object-project)
   * [Prerequisites](#rerequisites)
   * [Directories](#directories)
