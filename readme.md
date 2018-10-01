@@ -6,7 +6,7 @@ of the grid, good development practices and useful tools.
   * [Prerequisites](#rerequisites)
   * [Directories](#directories)
   * [Testing](#testing)
-  * [Running Example KOs in an Activator](#running-example-kos-in-an-activator)
+  * [Running Example KOs in an Activator](#running-example-collection-in-an-activator)
   * [Package](#package)
   * [Tools](#tools)
 - [Example Knowledage Objects](#example-knowledge-objects )  
@@ -76,7 +76,7 @@ npm run package
 ## List of other awesome KGrid Knowledge Object projects
 Other interesting collections
 
-* [Cancer Risk](https://github.com/kgrid-objects/cancer-risk)- Knowledge Objects of Cancer risk 
+* [Cancer Risk](https://github.com/kgrid-objects/cancer-risk-collection)- Knowledge Objects of Cancer risk 
 predictive models and risk score interpretations
-* [Opioid Collection](https://github.com/kgrid-objects/mopen-opioid-collection) - This is a collection 
+* [Opioid Collection](https://github.com/kgrid-objects/opioid-collection) - This is a collection 
 of KOs for KGrid that can be used to identify and report on certain features of opioid prescribing
