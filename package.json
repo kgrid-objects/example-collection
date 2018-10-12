@@ -20,14 +20,21 @@
     "jsonpath": "^1.0.0",
     "rewire": "^4.0.1",
     "scripty": "^1.7.2",
-    "shelljs": "^0.8.2"
+    "shelljs": "^0.8.2",
+    "vuepress": "^0.14.4"
   },
   "scripts": {
     "test": "jest",
     "dev": "node scripts/dev.js",
-    "package": "scripty"
+    "package": "scripty",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "jest": {
     "verbose": false
+  },
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 5.0.0"
   }
 }
