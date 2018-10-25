@@ -8,6 +8,7 @@ jobs:
     docker:
     # specify the version you desire here
     - image: circleci/openjdk:8-jdk-node
+    - image: kgrid/fcrepo:4.7.5
 
     working_directory: ~/repo
 
@@ -20,6 +21,8 @@ jobs:
         - v1-dependencies-{{ checksum "package.json" }}
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
+
+    - setup_remote_docker
 
     - run:
         name: Install Dependencies
@@ -34,10 +37,10 @@ jobs:
         name: Unit Testing
         command: npm test
 
-    # - run:
-    #     name: Intgration Testing
-    #     command: npm run ci
-    #
+    - run:
+        name: Unit Testing
+        command: npm run test-it
+
     # - run:
     #     name: Create CPIC Objects zip ready for deployment
     #     command: npm run package
