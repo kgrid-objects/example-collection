@@ -33,16 +33,29 @@ the tests directory.  You can execute the tests via npm
 npm test
 ```
 
-### Integration Testing (Running Example KOs in an Activator)
+### Integration Testing
 
-You can now test the example objects in an activator via a npm script. This script will download the
-latest released activator and start up the activator using the example repository as it's shelf.
+#### Postman Testing with Fedora Commons 
+We have some integration testing with Fedora Commons.  We use lite
+[Fedora image](https://hub.docker.com/r/kgrid/fcrepo/) based on [Fedora Docker](https://hub.docker.com/r/yinlinchen/fcrepo4-docker/) 
+which is part of [Fedora Labs](https://github.com/fcrepo4-labs). The test runs [Postman](https://www.getpostman.com/) 
+collection defined in [cpic_integration_tests](tests/tests/fcrepo.postman_collection.json) using
+ [Newman](https://www.npmjs.com/package/newman)
+
+```
+npm run test-it
+```
+
+#### Running Example KOs in an Activator
+You can now test the example objects in an activator via a npm script. This script will download the 
+latest released activator and start up the activator using the example repository as it's shelf. 
 
 Open a terminal window at the root of the cloned repository and run the following command.
 
 ```
 npm run dev
 ```
+
 
 ### Package
 

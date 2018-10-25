@@ -38,7 +38,7 @@ jobs:
         command: npm test
 
     - run:
-        name: Unit Testing
+        name: Integration Testing
         command: npm run test-it
 
     # - run:
