@@ -72,15 +72,9 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/fcrepo/rest",
-					"protocol": "http",
+					"raw": "{{url}}",
 					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"fcrepo",
-						"rest"
+						"{{url}}"
 					]
 				}
 			},
@@ -205,7 +199,7 @@
 							"});",
 							"",
 							"const getRequest={",
-							"  url: 'http://localhost:8080/fcrepo/rest/hello/world',",
+							"  url: pm.variables.get(\"url\")+'/hello/world',",
 							"  method: 'GET',",
 							"  header: {",
 							"      \"Prefer\":\"return=minimal\",",
@@ -230,12 +224,12 @@
 						"exec": [
 							"//Deletes Hello World if it exists",
 							"const deleteObjectRequest = {",
-							"  url: 'http://localhost:8080/fcrepo/rest/hello/world/',",
+							"  url: pm.variables.get(\"url\")+'/hello/world',",
 							"  method: 'DELETE'",
 							"};",
 							"",
 							"const deleteTombstone = {",
-							"  url: 'http://localhost:8080/fcrepo/rest/hello/world/fcr:tombstone',",
+							"  url:  pm.variables.get(\"url\")+'/hello/world/fcr:tombstone',",
 							"  method: 'DELETE'",
 							"};",
 							"",
@@ -251,7 +245,6 @@
 							"    }",
 							"}); ",
 							"",
-							"",
 							""
 						],
 						"type": "text/javascript"
@@ -261,12 +254,6 @@
 			"request": {
 				"method": "PUT",
 				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/rdf+xml",
-						"type": "text",
-						"disabled": true
-					},
 					{
 						"key": "Prefer",
 						"value": "handling=lenient; received=\"minimal\"",
@@ -283,18 +270,13 @@
 					"raw": "{\n    \"@context\": {\n        \"koio\": \"http://kgrid.org/koio#\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    },\n    \"@graph\": [\n        {\n            \"@id\": \"../hello/world\",\n            \"@type\":\"koio:KnowledgeObject\",\n            \"koio:identifer\":\"ark:/hello/world\",\n            \"dc:title\": \"Hello  It worked\",\n            \"koio:contributors\": \"KGRID TEAM\",\n            \"dc:description\": \"Test Hello World\",\n            \"koio:keywords\": \"test hello world\"\n            \n        }\n    ]\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8080/fcrepo/rest/hello/world/",
-					"protocol": "http",
+					"raw": "{{url}}/hello/world",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8080",
 					"path": [
-						"fcrepo",
-						"rest",
 						"hello",
-						"world",
-						""
+						"world"
 					]
 				}
 			},
@@ -418,7 +400,7 @@
 							"",
 							"pm.test(\"Your test name\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData[\"@graph\"][0].identifer).to.eql(\"ark:/hello/world\");",
+							"    pm.expect(jsonData.identifer).to.eql(\"ark:/hello/world\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -437,7 +419,8 @@
 					{
 						"key": "Prefer",
 						"value": "return=minimal",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					},
 					{
 						"key": "Accept",
@@ -454,13 +437,13 @@
 					{
 						"key": "Accept",
 						"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#flattened\"",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					},
 					{
 						"key": "Accept",
 						"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\"",
-						"type": "text",
-						"disabled": true
+						"type": "text"
 					},
 					{
 						"key": "Accept",
@@ -474,15 +457,11 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/fcrepo/rest/hello/world",
-					"protocol": "http",
+					"raw": "{{url}}/hello/world",
 					"host": [
-						"localhost"
+						"{{url}}"
 					],
-					"port": "8080",
 					"path": [
-						"fcrepo",
-						"rest",
 						"hello",
 						"world"
 					]

@@ -26,10 +26,10 @@
   },
   "scripts": {
     "test": "jest",
-    "postman": "newman run tests/fcrepo.postman_collection.json --reporters  cli,junit --reporter-junit-export test-results",
+    "postman": "newman run tests/fcrepo.postman_collection.json -e tests/fcrepo-itegration-tests.postman_environment.json --reporters  cli,junit --reporter-junit-export test-results",
     "dev": "node scripts/dev.js",
     "package": "scripty",
-    "test-it": "server-test :8080 postman ",
+    "test-it": "server-test :8088 postman ",
     "start": "node scripts/start-fcrepo.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
