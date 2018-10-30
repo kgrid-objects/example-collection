@@ -21,6 +21,10 @@ There are testing and packaging features in this project that require npm, npm i
 * **scripts/** is intended to capture various scripts need for the project (using [scripty](https://www.npmjs.com/package/scripty))
 * **scriptswin/** windows versions of the scripts
 
+### Example Knowledge Objects
+ * [Hello World](hello-world) - Simple KO designed as a starting point. Demostrates a project structure the includes unit testing and scripts to package the KO deposit.
+ * [BMI Calculator](ri-bmicalc) -  Simple KO designed to calculate BMI based on height and weight.  Demostrates passing mulitple attributes.
+ * [Minimum Viable](mvo-kgrid) -  Simple KO designed demostrate the smallest amount of information needed to get KO
 
 ### Testing
 Sample tests are located in the tests directory and can be executed using _npm_.  These tests utilize
@@ -39,7 +43,7 @@ npm test
 We have some integration testing with Fedora Commons.  We use lite
 [Fedora image](https://hub.docker.com/r/kgrid/fcrepo/) based on [Fedora Docker](https://hub.docker.com/r/yinlinchen/fcrepo4-docker/) 
 which is part of [Fedora Labs](https://github.com/fcrepo4-labs). The test runs [Postman](https://www.getpostman.com/) 
-collection defined in [cpic_integration_tests](tests/tests/fcrepo.postman_collection.json) using
+collection defined in [fcrepo create](tests/fcrepo-create.postman_collection.json) using
  [Newman](https://www.npmjs.com/package/newman)
 
 ```
@@ -50,7 +54,7 @@ The _test-it_ starts up the fcreop docker container and executes the postman tes
 fcrepo container is destroyed.  
 
 
-You can run rhe fcrepo and keep it running via the ```npm start```  command.  This starts up the fcrepo at http://localhost:8080/fcrepo/rest/.  You can run the postman test via the 
+You can run the fcrepo and keep it running via the ```npm start```  command.  This starts up the fcrepo at http://localhost:8080/fcrepo/rest/.  You can run the postman test via the 
 Postman app or via newman ```npm run postman```
 
 
@@ -81,15 +85,3 @@ npm run package
 * [jest](https://jestjs.io/)
 * [rewire](https://github.com/jhnns/rewire)
 
-## Example Knowledge Objects
- * [Hello World](hello-world) - Simple KO designed as a starting point. Demostrates a project structure the includes unit testing and scripts to package the KO deposit.
- * [BMI Calculator](ri-bmicalc) -  Simple KO designed to calculate BMI based on height and weight.  Demostrates passing mulitple attributes.
- * [Minimum Viable](mvo-kgrid) -  Simple KO designed demostrate the smallest amount of information needed to get KO
-
-## List of other awesome KGrid Knowledge Object projects
-Other interesting collections
-
-* [Cancer Risk](https://github.com/kgrid-objects/cancer-risk-collection)- Knowledge Objects of Cancer risk
-predictive models and risk score interpretations
-* [Opioid Collection](https://github.com/kgrid-objects/opioid-collection) - This is a collection
-of KOs for KGrid that can be used to identify and report on certain features of opioid prescribing
