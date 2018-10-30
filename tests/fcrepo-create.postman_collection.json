@@ -76,7 +76,8 @@
 					"host": [
 						"{{fcrepo-url}}"
 					]
-				}
+				},
+				"description": "Quick Test to make sure FCREPO is up and running."
 			},
 			"response": [
 				{
@@ -226,46 +227,8 @@
 						"hello",
 						"world"
 					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create Transaction",
-			"event": [
-				{
-					"listen": "test",
-					"script": {
-						"id": "55c55dd2-1a23-41eb-ae51-953b7aa3b789",
-						"exec": [
-							"pm.test(\"Status code is 201\", function () {",
-							"    pm.response.to.have.status(201);",
-							"});",
-							"",
-							"pm.environment.set(\"fcrepo-url\", pm.response.headers.get(\"Location\"));",
-							"",
-							""
-						],
-						"type": "text/javascript"
-					}
-				}
-			],
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
 				},
-				"url": {
-					"raw": "{{fcrepo-url}}/fcr:tx",
-					"host": [
-						"{{fcrepo-url}}"
-					],
-					"path": [
-						"fcr:tx"
-					]
-				}
+				"description": "Deletes Hello World.  Two steps, one to delete the resource and than delete the tombstone."
 			},
 			"response": []
 		},
@@ -317,11 +280,17 @@
 						"key": "Content-Type",
 						"value": "application/ld+json",
 						"type": "text"
+					},
+					{
+						"key": "Slug",
+						"value": "hello/world",
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"@context\": {\n        \"koio\": \"http://kgrid.org/koio#\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    },\n    \"@graph\": [\n        {\n            \"@id\": \"../hello/world\",\n            \"@type\":\"koio:KnowledgeObject\",\n            \"koio:identifer\":\"ark:/hello/world\",\n            \"dc:title\": \"Hello  It worked\",\n            \"koio:contributors\": \"KGRID TEAM\",\n            \"dc:description\": \"Test Hello World\",\n            \"koio:keywords\": \"test hello world\"\n\n\n        }\n    ]\n}"
+					"raw": "{}"
 				},
 				"url": {
 					"raw": "{{fcrepo-url}}/hello/world",
@@ -499,11 +468,738 @@
 						"key": "Content-Type",
 						"value": "application/ld+json",
 						"type": "text"
+					},
+					{
+						"key": "Slug",
+						"value": "/hello/world/v0.0.1",
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"@context\": {\n        \"koio\": \"http://kgrid.org/koio#\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    },\n    \"@graph\": [\n        {\n            \"@id\": \"../../hello/world/v0.0.1\",\n            \"@type\":\"koio:Implementation\",\n            \"dc:title\": \"Implementation 0.0.1 of Hello Workd\",\n            \"dc:description\": \"This is the second implementation of the hello world KO, enjoy\",\n            \"koio:hasDeploymentSpecification\":\"deploymentspecification.yaml\",\n            \"koio:hasServiceSpecification\":\"servicespecification.yaml\",\n            \"koio:hasPayload\":\"welcome.js\"\n            \n        }\n    ]\n}"
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "{{fcrepo-url}}/hello/world/v0.0.1",
+					"host": [
+						"{{fcrepo-url}}"
+					],
+					"path": [
+						"hello",
+						"world",
+						"v0.0.1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Hello World KO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\"",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=minimal",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/fcrepo/rest/hello-world/v0.0.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fcrepo",
+								"rest",
+								"hello-world",
+								"v0.0.1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Apache-Coyote/1.1"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126643f34ac396055dd8328ff5ad9a6e019a277c\""
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Thu, 18 Oct 2018 19:27:15 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Resource>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Container>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#BasicContainer>;rel=\"type\""
+						},
+						{
+							"key": "Accept-Patch",
+							"value": "application/sparql-update"
+						},
+						{
+							"key": "Accept-Post",
+							"value": "text/turtle,text/rdf+n3,text/n3,application/rdf+xml,application/n-triples,application/ld+json,multipart/form-data,application/sparql-update"
+						},
+						{
+							"key": "Allow",
+							"value": "MOVE,COPY,DELETE,POST,HEAD,GET,PUT,PATCH,OPTIONS"
+						},
+						{
+							"key": "Preference-Applied",
+							"value": "return=minimal"
+						},
+						{
+							"key": "Vary",
+							"value": "Prefer"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Range, Accept-Encoding, Accept-Language"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1835"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Oct 2018 17:47:23 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@id\": \"http://localhost:8080/fcrepo/rest/hello-world/v0.0.1\",\n    \"arkId\": \"ark:/hello/world\",\n    \"contributors\": \"KGRID TEAM\",\n    \"createdOn\": \"0\",\n    \"description\": \"description\",\n    \"keywords\": \"Keywords\",\n    \"lastModified\": \"0\",\n    \"licenseLink\": \"\",\n    \"licenseName\": \"\",\n    \"model\": \"model\",\n    \"owners\": \"KGRID\",\n    \"published\": \"false\",\n    \"service\": \"model/service/servicedescriptor.yaml\",\n    \"title\": \"Hello, World\",\n    \"url\": \"http://url\",\n    \"version\": \"v0.0.1\",\n    \"@context\": {\n        \"model\": {\n            \"@id\": \"http://kgrid.org/ko#model\"\n        },\n        \"licenseLink\": {\n            \"@id\": \"http://kgrid.org/ko#licenseLink\"\n        },\n        \"createdOn\": {\n            \"@id\": \"http://kgrid.org/ko#createdOn\"\n        },\n        \"contributors\": {\n            \"@id\": \"http://kgrid.org/ko#contributors\"\n        },\n        \"licenseName\": {\n            \"@id\": \"http://kgrid.org/ko#licenseName\"\n        },\n        \"service\": {\n            \"@id\": \"http://kgrid.org/ko#service\"\n        },\n        \"version\": {\n            \"@id\": \"http://kgrid.org/ko#version\"\n        },\n        \"description\": {\n            \"@id\": \"http://kgrid.org/ko#description\"\n        },\n        \"lastModified\": {\n            \"@id\": \"http://kgrid.org/ko#lastModified\"\n        },\n        \"keywords\": {\n            \"@id\": \"http://kgrid.org/ko#keywords\"\n        },\n        \"title\": {\n            \"@id\": \"http://kgrid.org/ko#title\"\n        },\n        \"url\": {\n            \"@id\": \"http://kgrid.org/ko#url\"\n        },\n        \"owners\": {\n            \"@id\": \"http://kgrid.org/ko#owners\"\n        },\n        \"arkId\": {\n            \"@id\": \"http://kgrid.org/ko#arkId\"\n        },\n        \"published\": {\n            \"@id\": \"http://kgrid.org/ko#published\"\n        },\n        \"premis\": \"http://www.loc.gov/premis/rdf/v1#\",\n        \"test\": \"info:fedora/test/\",\n        \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n        \"ns001\": \"http://kgrid.org/ko#\",\n        \"xsi\": \"http://www.w3.org/2001/XMLSchema-instance\",\n        \"xmlns\": \"http://www.w3.org/2000/xmlns/\",\n        \"rdf\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n        \"fedora\": \"http://fedora.info/definitions/v4/repository#\",\n        \"xml\": \"http://www.w3.org/XML/1998/namespace\",\n        \"ebucore\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#\",\n        \"ldp\": \"http://www.w3.org/ns/ldp#\",\n        \"xs\": \"http://www.w3.org/2001/XMLSchema\",\n        \"fedoraconfig\": \"http://fedora.info/definitions/v4/config#\",\n        \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Implementation v0.0.1 ServiceSpecification",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe7c5934-5905-42eb-8c1a-fd200f76a38f",
+						"exec": [
+							"/// Find Hello World and check for the identifer",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "388df8a4-171a-4cb3-a8bc-cda63ebcbe1d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Prefer",
+						"type": "text",
+						"value": "handling=lenient; received=\"minimal\""
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/octet-stream",
+						"type": "text"
+					},
+					{
+						"key": "Content-Disposition",
+						"value": "inline; filename=\"service-specification.yaml\"",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<http://kgrid.org/koio#ServiceSpecification>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "{{fcrepo-url}}/hello/world/v0.0.1/service-specification.yaml",
+					"host": [
+						"{{fcrepo-url}}"
+					],
+					"path": [
+						"hello",
+						"world",
+						"v0.0.1",
+						"service-specification.yaml"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Hello World KO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\"",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=minimal",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/fcrepo/rest/hello-world/v0.0.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fcrepo",
+								"rest",
+								"hello-world",
+								"v0.0.1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Apache-Coyote/1.1"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126643f34ac396055dd8328ff5ad9a6e019a277c\""
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Thu, 18 Oct 2018 19:27:15 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Resource>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Container>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#BasicContainer>;rel=\"type\""
+						},
+						{
+							"key": "Accept-Patch",
+							"value": "application/sparql-update"
+						},
+						{
+							"key": "Accept-Post",
+							"value": "text/turtle,text/rdf+n3,text/n3,application/rdf+xml,application/n-triples,application/ld+json,multipart/form-data,application/sparql-update"
+						},
+						{
+							"key": "Allow",
+							"value": "MOVE,COPY,DELETE,POST,HEAD,GET,PUT,PATCH,OPTIONS"
+						},
+						{
+							"key": "Preference-Applied",
+							"value": "return=minimal"
+						},
+						{
+							"key": "Vary",
+							"value": "Prefer"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Range, Accept-Encoding, Accept-Language"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1835"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Oct 2018 17:47:23 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@id\": \"http://localhost:8080/fcrepo/rest/hello-world/v0.0.1\",\n    \"arkId\": \"ark:/hello/world\",\n    \"contributors\": \"KGRID TEAM\",\n    \"createdOn\": \"0\",\n    \"description\": \"description\",\n    \"keywords\": \"Keywords\",\n    \"lastModified\": \"0\",\n    \"licenseLink\": \"\",\n    \"licenseName\": \"\",\n    \"model\": \"model\",\n    \"owners\": \"KGRID\",\n    \"published\": \"false\",\n    \"service\": \"model/service/servicedescriptor.yaml\",\n    \"title\": \"Hello, World\",\n    \"url\": \"http://url\",\n    \"version\": \"v0.0.1\",\n    \"@context\": {\n        \"model\": {\n            \"@id\": \"http://kgrid.org/ko#model\"\n        },\n        \"licenseLink\": {\n            \"@id\": \"http://kgrid.org/ko#licenseLink\"\n        },\n        \"createdOn\": {\n            \"@id\": \"http://kgrid.org/ko#createdOn\"\n        },\n        \"contributors\": {\n            \"@id\": \"http://kgrid.org/ko#contributors\"\n        },\n        \"licenseName\": {\n            \"@id\": \"http://kgrid.org/ko#licenseName\"\n        },\n        \"service\": {\n            \"@id\": \"http://kgrid.org/ko#service\"\n        },\n        \"version\": {\n            \"@id\": \"http://kgrid.org/ko#version\"\n        },\n        \"description\": {\n            \"@id\": \"http://kgrid.org/ko#description\"\n        },\n        \"lastModified\": {\n            \"@id\": \"http://kgrid.org/ko#lastModified\"\n        },\n        \"keywords\": {\n            \"@id\": \"http://kgrid.org/ko#keywords\"\n        },\n        \"title\": {\n            \"@id\": \"http://kgrid.org/ko#title\"\n        },\n        \"url\": {\n            \"@id\": \"http://kgrid.org/ko#url\"\n        },\n        \"owners\": {\n            \"@id\": \"http://kgrid.org/ko#owners\"\n        },\n        \"arkId\": {\n            \"@id\": \"http://kgrid.org/ko#arkId\"\n        },\n        \"published\": {\n            \"@id\": \"http://kgrid.org/ko#published\"\n        },\n        \"premis\": \"http://www.loc.gov/premis/rdf/v1#\",\n        \"test\": \"info:fedora/test/\",\n        \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n        \"ns001\": \"http://kgrid.org/ko#\",\n        \"xsi\": \"http://www.w3.org/2001/XMLSchema-instance\",\n        \"xmlns\": \"http://www.w3.org/2000/xmlns/\",\n        \"rdf\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n        \"fedora\": \"http://fedora.info/definitions/v4/repository#\",\n        \"xml\": \"http://www.w3.org/XML/1998/namespace\",\n        \"ebucore\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#\",\n        \"ldp\": \"http://www.w3.org/ns/ldp#\",\n        \"xs\": \"http://www.w3.org/2001/XMLSchema\",\n        \"fedoraconfig\": \"http://fedora.info/definitions/v4/config#\",\n        \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Implementation v0.0.1 Deployment Specification",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe7c5934-5905-42eb-8c1a-fd200f76a38f",
+						"exec": [
+							"/// Find Hello World and check for the identifer",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "388df8a4-171a-4cb3-a8bc-cda63ebcbe1d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Prefer",
+						"type": "text",
+						"value": "handling=lenient; received=\"minimal\""
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/octet-stream"
+					},
+					{
+						"key": "Content-Disposition",
+						"value": "inline; filename=\"deployment-specification.yaml\"",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<http://kgrid.org/koio#ServiceSpecification>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "{{fcrepo-url}}/hello/world/v0.0.1/deployment-specification.yaml",
+					"host": [
+						"{{fcrepo-url}}"
+					],
+					"path": [
+						"hello",
+						"world",
+						"v0.0.1",
+						"deployment-specification.yaml"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Hello World KO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\"",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=minimal",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/fcrepo/rest/hello-world/v0.0.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fcrepo",
+								"rest",
+								"hello-world",
+								"v0.0.1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Apache-Coyote/1.1"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126643f34ac396055dd8328ff5ad9a6e019a277c\""
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Thu, 18 Oct 2018 19:27:15 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Resource>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Container>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#BasicContainer>;rel=\"type\""
+						},
+						{
+							"key": "Accept-Patch",
+							"value": "application/sparql-update"
+						},
+						{
+							"key": "Accept-Post",
+							"value": "text/turtle,text/rdf+n3,text/n3,application/rdf+xml,application/n-triples,application/ld+json,multipart/form-data,application/sparql-update"
+						},
+						{
+							"key": "Allow",
+							"value": "MOVE,COPY,DELETE,POST,HEAD,GET,PUT,PATCH,OPTIONS"
+						},
+						{
+							"key": "Preference-Applied",
+							"value": "return=minimal"
+						},
+						{
+							"key": "Vary",
+							"value": "Prefer"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Range, Accept-Encoding, Accept-Language"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1835"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Oct 2018 17:47:23 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@id\": \"http://localhost:8080/fcrepo/rest/hello-world/v0.0.1\",\n    \"arkId\": \"ark:/hello/world\",\n    \"contributors\": \"KGRID TEAM\",\n    \"createdOn\": \"0\",\n    \"description\": \"description\",\n    \"keywords\": \"Keywords\",\n    \"lastModified\": \"0\",\n    \"licenseLink\": \"\",\n    \"licenseName\": \"\",\n    \"model\": \"model\",\n    \"owners\": \"KGRID\",\n    \"published\": \"false\",\n    \"service\": \"model/service/servicedescriptor.yaml\",\n    \"title\": \"Hello, World\",\n    \"url\": \"http://url\",\n    \"version\": \"v0.0.1\",\n    \"@context\": {\n        \"model\": {\n            \"@id\": \"http://kgrid.org/ko#model\"\n        },\n        \"licenseLink\": {\n            \"@id\": \"http://kgrid.org/ko#licenseLink\"\n        },\n        \"createdOn\": {\n            \"@id\": \"http://kgrid.org/ko#createdOn\"\n        },\n        \"contributors\": {\n            \"@id\": \"http://kgrid.org/ko#contributors\"\n        },\n        \"licenseName\": {\n            \"@id\": \"http://kgrid.org/ko#licenseName\"\n        },\n        \"service\": {\n            \"@id\": \"http://kgrid.org/ko#service\"\n        },\n        \"version\": {\n            \"@id\": \"http://kgrid.org/ko#version\"\n        },\n        \"description\": {\n            \"@id\": \"http://kgrid.org/ko#description\"\n        },\n        \"lastModified\": {\n            \"@id\": \"http://kgrid.org/ko#lastModified\"\n        },\n        \"keywords\": {\n            \"@id\": \"http://kgrid.org/ko#keywords\"\n        },\n        \"title\": {\n            \"@id\": \"http://kgrid.org/ko#title\"\n        },\n        \"url\": {\n            \"@id\": \"http://kgrid.org/ko#url\"\n        },\n        \"owners\": {\n            \"@id\": \"http://kgrid.org/ko#owners\"\n        },\n        \"arkId\": {\n            \"@id\": \"http://kgrid.org/ko#arkId\"\n        },\n        \"published\": {\n            \"@id\": \"http://kgrid.org/ko#published\"\n        },\n        \"premis\": \"http://www.loc.gov/premis/rdf/v1#\",\n        \"test\": \"info:fedora/test/\",\n        \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n        \"ns001\": \"http://kgrid.org/ko#\",\n        \"xsi\": \"http://www.w3.org/2001/XMLSchema-instance\",\n        \"xmlns\": \"http://www.w3.org/2000/xmlns/\",\n        \"rdf\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n        \"fedora\": \"http://fedora.info/definitions/v4/repository#\",\n        \"xml\": \"http://www.w3.org/XML/1998/namespace\",\n        \"ebucore\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#\",\n        \"ldp\": \"http://www.w3.org/ns/ldp#\",\n        \"xs\": \"http://www.w3.org/2001/XMLSchema\",\n        \"fedoraconfig\": \"http://fedora.info/definitions/v4/config#\",\n        \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Implementation v0.0.1Pay Load",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe7c5934-5905-42eb-8c1a-fd200f76a38f",
+						"exec": [
+							"/// Find Hello World and check for the identifer",
+							"",
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "388df8a4-171a-4cb3-a8bc-cda63ebcbe1d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Prefer",
+						"type": "text",
+						"value": "handling=lenient; received=\"minimal\""
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/octet-stream"
+					},
+					{
+						"key": "Content-Disposition",
+						"value": "inline; filename=\"welcome.js\"",
+						"type": "text"
+					},
+					{
+						"key": "Link",
+						"value": "<http://kgrid.org/koio#ServiceSpecification>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {}
+				},
+				"url": {
+					"raw": "{{fcrepo-url}}/hello/world/v0.0.1/welcome.js",
+					"host": [
+						"{{fcrepo-url}}"
+					],
+					"path": [
+						"hello",
+						"world",
+						"v0.0.1",
+						"welcome.js"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Hello World KO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\"",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=minimal",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/fcrepo/rest/hello-world/v0.0.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fcrepo",
+								"rest",
+								"hello-world",
+								"v0.0.1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Apache-Coyote/1.1"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126643f34ac396055dd8328ff5ad9a6e019a277c\""
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Thu, 18 Oct 2018 19:27:15 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Resource>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Container>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#BasicContainer>;rel=\"type\""
+						},
+						{
+							"key": "Accept-Patch",
+							"value": "application/sparql-update"
+						},
+						{
+							"key": "Accept-Post",
+							"value": "text/turtle,text/rdf+n3,text/n3,application/rdf+xml,application/n-triples,application/ld+json,multipart/form-data,application/sparql-update"
+						},
+						{
+							"key": "Allow",
+							"value": "MOVE,COPY,DELETE,POST,HEAD,GET,PUT,PATCH,OPTIONS"
+						},
+						{
+							"key": "Preference-Applied",
+							"value": "return=minimal"
+						},
+						{
+							"key": "Vary",
+							"value": "Prefer"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Range, Accept-Encoding, Accept-Language"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1835"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Oct 2018 17:47:23 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@id\": \"http://localhost:8080/fcrepo/rest/hello-world/v0.0.1\",\n    \"arkId\": \"ark:/hello/world\",\n    \"contributors\": \"KGRID TEAM\",\n    \"createdOn\": \"0\",\n    \"description\": \"description\",\n    \"keywords\": \"Keywords\",\n    \"lastModified\": \"0\",\n    \"licenseLink\": \"\",\n    \"licenseName\": \"\",\n    \"model\": \"model\",\n    \"owners\": \"KGRID\",\n    \"published\": \"false\",\n    \"service\": \"model/service/servicedescriptor.yaml\",\n    \"title\": \"Hello, World\",\n    \"url\": \"http://url\",\n    \"version\": \"v0.0.1\",\n    \"@context\": {\n        \"model\": {\n            \"@id\": \"http://kgrid.org/ko#model\"\n        },\n        \"licenseLink\": {\n            \"@id\": \"http://kgrid.org/ko#licenseLink\"\n        },\n        \"createdOn\": {\n            \"@id\": \"http://kgrid.org/ko#createdOn\"\n        },\n        \"contributors\": {\n            \"@id\": \"http://kgrid.org/ko#contributors\"\n        },\n        \"licenseName\": {\n            \"@id\": \"http://kgrid.org/ko#licenseName\"\n        },\n        \"service\": {\n            \"@id\": \"http://kgrid.org/ko#service\"\n        },\n        \"version\": {\n            \"@id\": \"http://kgrid.org/ko#version\"\n        },\n        \"description\": {\n            \"@id\": \"http://kgrid.org/ko#description\"\n        },\n        \"lastModified\": {\n            \"@id\": \"http://kgrid.org/ko#lastModified\"\n        },\n        \"keywords\": {\n            \"@id\": \"http://kgrid.org/ko#keywords\"\n        },\n        \"title\": {\n            \"@id\": \"http://kgrid.org/ko#title\"\n        },\n        \"url\": {\n            \"@id\": \"http://kgrid.org/ko#url\"\n        },\n        \"owners\": {\n            \"@id\": \"http://kgrid.org/ko#owners\"\n        },\n        \"arkId\": {\n            \"@id\": \"http://kgrid.org/ko#arkId\"\n        },\n        \"published\": {\n            \"@id\": \"http://kgrid.org/ko#published\"\n        },\n        \"premis\": \"http://www.loc.gov/premis/rdf/v1#\",\n        \"test\": \"info:fedora/test/\",\n        \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n        \"ns001\": \"http://kgrid.org/ko#\",\n        \"xsi\": \"http://www.w3.org/2001/XMLSchema-instance\",\n        \"xmlns\": \"http://www.w3.org/2000/xmlns/\",\n        \"rdf\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n        \"fedora\": \"http://fedora.info/definitions/v4/repository#\",\n        \"xml\": \"http://www.w3.org/XML/1998/namespace\",\n        \"ebucore\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#\",\n        \"ldp\": \"http://www.w3.org/ns/ldp#\",\n        \"xs\": \"http://www.w3.org/2001/XMLSchema\",\n        \"fedoraconfig\": \"http://fedora.info/definitions/v4/config#\",\n        \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Implementation v0.0.1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe7c5934-5905-42eb-8c1a-fd200f76a38f",
+						"exec": [
+							"/// Find Hello World and check for the identifer",
+							"",
+							"pm.test(\"Status code is 204\", function () {",
+							"    pm.response.to.have.status(204);",
+							"});",
+							"",
+							"const getRequest={",
+							"  url: pm.variables.get(\"fcrepo-url\")+'/hello/world/v0.0.1',",
+							"  method: 'GET',",
+							"  header: {",
+							"      \"Prefer\":\"return=minimal\",",
+							"      \"Accept\":\"application/ld+json; profile=\\\"http://www.w3.org/ns/json-ld#compacted\\\"\"",
+							"  }",
+							"};",
+							"",
+							"pm.sendRequest(getRequest, function (err, response) {",
+							"    var jsonData = response.json();",
+							"    pm.test(\"Find v0.0.1\"), function() {",
+							"       pm.expect(jsonData.title).to.eql(\"\");",
+							"    }",
+							"    ",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "388df8a4-171a-4cb3-a8bc-cda63ebcbe1d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Prefer",
+						"value": "handling=lenient; received=\"minimal\"",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Slug",
+						"value": "/hello/world/v0.0.1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"@context\": {\n        \"koio\": \"http://kgrid.org/koio#\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\",\n        \"ldp\": \"http://www.w3.org/ns/ldp\",\n        \"hasServiceSpecification\": {\n                \"@id\": \"http://kgrid.org/koio#hasServiceSpecification\",\n                 \"@type\": \"@id\"\n         },\n         \"hasDeploymentSpecification\": {\n                \"@id\": \"http://kgrid.org/koio#hasDeploymentSpecification\",\n                 \"@type\": \"@id\"\n         },\n         \"hasPayload\": {\n                \"@id\": \"http://kgrid.org/koio#hasPayload\",\n                 \"@type\": \"@id\"\n         }\n    },\n    \"@graph\": [\n        {\n            \"@id\": \"v0.0.1\",\n            \"@type\":\"koio:Implementation\",\n            \"dc:identifier\":\"v0.0.1\",\n            \"dc:title\": \"Implementation 0.0.1 of Hello Workd\",\n\t\t\t\"hasServiceSpecification\":\"v0.0.1/service-specification.yaml\",\n\t\t\t\"hasDeploymentSpecification\":\"v0.0.1/deployment-specification.yaml\",\n\t\t\t\"hasPayload\":\"v0.0.1/welcome.js\"\n         }\n    ]\n}\n"
 				},
 				"url": {
 					"raw": "{{fcrepo-url}}/hello/world/v0.0.1",
@@ -638,7 +1334,7 @@
 							"});",
 							"",
 							"const getRequest={",
-							"  url: pm.variables.get(\"fcrepo-url\")+'/hello/world/v0.0.2',",
+							"  url: pm.variables.get(\"fcrepo-url\")+'/hello/world/v0.0.1',",
 							"  method: 'GET',",
 							"  header: {",
 							"      \"Prefer\":\"return=minimal\",",
@@ -647,12 +1343,11 @@
 							"};",
 							"",
 							"pm.sendRequest(getRequest, function (err, response) {",
+							"    var jsonData = response.json();",
+							"    pm.test(\"Find v0.0.1\"), function() {",
+							"       pm.expect(jsonData.title).to.eql(\"\");",
+							"    }",
 							"    ",
-							"    pm.test(\"Find v0.0.1\" , function() {",
-							"        let jsonData = response.json();",
-							"        pm.expect(jsonData.title).to.eql(\"Implementation 0.0.2 of Hello World\"); ",
-							"    });",
-							"        ",
 							"});",
 							"",
 							""
@@ -676,18 +1371,24 @@
 				"header": [
 					{
 						"key": "Prefer",
-						"type": "text",
-						"value": "handling=lenient; received=\"minimal\""
+						"value": "handling=lenient; received=\"minimal\"",
+						"type": "text"
 					},
 					{
 						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					},
+					{
+						"key": "Slug",
+						"value": "/hello/world/v0.0.1",
 						"type": "text",
-						"value": "application/ld+json"
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"@context\": {\n        \"koio\": \"http://kgrid.org/koio#\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    },\n    \"@graph\": [\n        {\n            \"@id\": \"../../hello/world/v0.0.2\",\n            \"@type\":\"koio:Implementation\",\n            \"dc:title\": \"Implementation 0.0.2 of Hello World\",\n            \"dc:description\": \"This is the second implementation of the hello world KO, enjoy\",\n            \"koio:hasDeploymentSpecification\":\"deploymentspecification.yaml\",\n            \"koio:hasServiceSpecification\":\"servicespecification.yaml\",\n            \"koio:hasPayload\":\"welcome.js\"\n            \n        }\n    ]\n}"
+					"raw": "{\n    \"@context\": {\n        \"koio\": \"http://kgrid.org/koio#\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\",\n        \"ldp\": \"http://www.w3.org/ns/ldp\",\n        \"hasServiceSpecification\": {\n                \"@id\": \"http://kgrid.org/koio#hasServiceSpecification\",\n                 \"@type\": \"@id\"\n         },\n         \"hasDeploymentSpecification\": {\n                \"@id\": \"http://kgrid.org/koio#hasDeploymentSpecification\",\n                 \"@type\": \"@id\"\n         },\n         \"hasPayload\": {\n                \"@id\": \"http://kgrid.org/koio#hasPayload\",\n                 \"@type\": \"@id\"\n         }\n    },\n    \"@graph\": [\n        {\n            \"@id\": \"v0.0.2\",\n            \"@type\":\"koio:Implementation\",\n            \"dc:identifier\":\"v0.0.2\",\n            \"dc:title\": \"Implementation 0.0.2 of Hello Workd\",\n\t\t\t\"hasServiceSpecification\":\"v0.0.1/service-specification.yaml\",\n\t\t\t\"hasDeploymentSpecification\":\"v0.0.1/deployment-specification.yaml\",\n\t\t\t\"hasPayload\":\"v0.0.1/welcome.js\"\n         }\n    ]\n}\n"
 				},
 				"url": {
 					"raw": "{{fcrepo-url}}/hello/world/v0.0.2",
@@ -808,42 +1509,175 @@
 			]
 		},
 		{
-			"name": "Commit Transaction",
+			"name": "Update KnowledgeObject",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "bcfa8b0a-dd75-4419-a443-73dfe9b911d6",
+						"id": "fe7c5934-5905-42eb-8c1a-fd200f76a38f",
 						"exec": [
+							"/// Find Hello World and check for the identifer",
+							"",
 							"pm.test(\"Status code is 204\", function () {",
 							"    pm.response.to.have.status(204);",
 							"});",
 							"",
-							"pm.environment.set(\"fcrepo-url\", pm.environment.get(\"fcrepo-base-url\") );"
+							"",
+							"",
+							"",
+							"",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "388df8a4-171a-4cb3-a8bc-cda63ebcbe1d",
+						"exec": [
+							""
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
 			"request": {
-				"method": "POST",
-				"header": [],
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Prefer",
+						"value": "handling=lenient; received=\"minimal\"",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/ld+json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n    \"@context\": {\n        \"koio\": \"http://kgrid.org/koio#\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\",\n        \"hasImplementation\": {\n                \"@id\": \"http://kgrid.org/koio#hasImplementation\",\n                 \"@type\": \"@id\"\n         }\n    },\n    \"@graph\": [\n        {\n            \"@id\": \"../hello/world\",\n            \"@type\":\"koio:KnowledgeObject\",\n            \"dc:identifer\":\"ark:/hello/world\",\n            \"dc:title\":\"Hello  World Title\",\n            \"koio:contributors\": \"Kgrid Team\",\n            \"dc:description\": \"Test Hello World \", \n            \"koio:keywords\": \"test hello world\",\n             \"hasImplementation\":[\n                  \"../hello/world/v0.0.1\",\n                  \"../hello/world/v0.0.2\"\n             ]\n        }\n    ]\n}\n           "
 				},
 				"url": {
-					"raw": "{{fcrepo-url}}/fcr:tx/fcr:commit",
+					"raw": "{{fcrepo-url}}/hello/world",
 					"host": [
 						"{{fcrepo-url}}"
 					],
 					"path": [
-						"fcr:tx",
-						"fcr:commit"
+						"hello",
+						"world"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Hello World KO",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\"",
+								"type": "text"
+							},
+							{
+								"key": "Prefer",
+								"value": "return=minimal",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/fcrepo/rest/hello-world/v0.0.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"fcrepo",
+								"rest",
+								"hello-world",
+								"v0.0.1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Apache-Coyote/1.1"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126643f34ac396055dd8328ff5ad9a6e019a277c\""
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Thu, 18 Oct 2018 19:27:15 GMT"
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Resource>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#Container>;rel=\"type\""
+						},
+						{
+							"key": "Link",
+							"value": "<http://www.w3.org/ns/ldp#BasicContainer>;rel=\"type\""
+						},
+						{
+							"key": "Accept-Patch",
+							"value": "application/sparql-update"
+						},
+						{
+							"key": "Accept-Post",
+							"value": "text/turtle,text/rdf+n3,text/n3,application/rdf+xml,application/n-triples,application/ld+json,multipart/form-data,application/sparql-update"
+						},
+						{
+							"key": "Allow",
+							"value": "MOVE,COPY,DELETE,POST,HEAD,GET,PUT,PATCH,OPTIONS"
+						},
+						{
+							"key": "Preference-Applied",
+							"value": "return=minimal"
+						},
+						{
+							"key": "Vary",
+							"value": "Prefer"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Range, Accept-Encoding, Accept-Language"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#compacted\""
+						},
+						{
+							"key": "Content-Length",
+							"value": "1835"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 23 Oct 2018 17:47:23 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@id\": \"http://localhost:8080/fcrepo/rest/hello-world/v0.0.1\",\n    \"arkId\": \"ark:/hello/world\",\n    \"contributors\": \"KGRID TEAM\",\n    \"createdOn\": \"0\",\n    \"description\": \"description\",\n    \"keywords\": \"Keywords\",\n    \"lastModified\": \"0\",\n    \"licenseLink\": \"\",\n    \"licenseName\": \"\",\n    \"model\": \"model\",\n    \"owners\": \"KGRID\",\n    \"published\": \"false\",\n    \"service\": \"model/service/servicedescriptor.yaml\",\n    \"title\": \"Hello, World\",\n    \"url\": \"http://url\",\n    \"version\": \"v0.0.1\",\n    \"@context\": {\n        \"model\": {\n            \"@id\": \"http://kgrid.org/ko#model\"\n        },\n        \"licenseLink\": {\n            \"@id\": \"http://kgrid.org/ko#licenseLink\"\n        },\n        \"createdOn\": {\n            \"@id\": \"http://kgrid.org/ko#createdOn\"\n        },\n        \"contributors\": {\n            \"@id\": \"http://kgrid.org/ko#contributors\"\n        },\n        \"licenseName\": {\n            \"@id\": \"http://kgrid.org/ko#licenseName\"\n        },\n        \"service\": {\n            \"@id\": \"http://kgrid.org/ko#service\"\n        },\n        \"version\": {\n            \"@id\": \"http://kgrid.org/ko#version\"\n        },\n        \"description\": {\n            \"@id\": \"http://kgrid.org/ko#description\"\n        },\n        \"lastModified\": {\n            \"@id\": \"http://kgrid.org/ko#lastModified\"\n        },\n        \"keywords\": {\n            \"@id\": \"http://kgrid.org/ko#keywords\"\n        },\n        \"title\": {\n            \"@id\": \"http://kgrid.org/ko#title\"\n        },\n        \"url\": {\n            \"@id\": \"http://kgrid.org/ko#url\"\n        },\n        \"owners\": {\n            \"@id\": \"http://kgrid.org/ko#owners\"\n        },\n        \"arkId\": {\n            \"@id\": \"http://kgrid.org/ko#arkId\"\n        },\n        \"published\": {\n            \"@id\": \"http://kgrid.org/ko#published\"\n        },\n        \"premis\": \"http://www.loc.gov/premis/rdf/v1#\",\n        \"test\": \"info:fedora/test/\",\n        \"rdfs\": \"http://www.w3.org/2000/01/rdf-schema#\",\n        \"ns001\": \"http://kgrid.org/ko#\",\n        \"xsi\": \"http://www.w3.org/2001/XMLSchema-instance\",\n        \"xmlns\": \"http://www.w3.org/2000/xmlns/\",\n        \"rdf\": \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n        \"fedora\": \"http://fedora.info/definitions/v4/repository#\",\n        \"xml\": \"http://www.w3.org/XML/1998/namespace\",\n        \"ebucore\": \"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#\",\n        \"ldp\": \"http://www.w3.org/ns/ldp#\",\n        \"xs\": \"http://www.w3.org/2001/XMLSchema\",\n        \"fedoraconfig\": \"http://fedora.info/definitions/v4/config#\",\n        \"foaf\": \"http://xmlns.com/foaf/0.1/\",\n        \"dc\": \"http://purl.org/dc/elements/1.1/\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Get Hello World",
@@ -859,7 +1693,18 @@
 							"",
 							"pm.test(\"Find Hello World\", function () {",
 							"    var jsonData = pm.response.json();",
-							"    pm.expect(jsonData.identifer).to.eql(\"ark:/hello/world\");",
+							"    console.log(jsonData['@graph'][0].identifer);",
+							"    pm.expect(jsonData['@graph'][0].identifer).to.eql(\"ark:/hello/world\");",
+							"});",
+							"",
+							"pm.test(\"Implementation\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData['@graph'][0].hasImplementation[0]).to.eql(\"http://localhost:8080/fcrepo/rest/hello/world/v0.0.1\");",
+							"});",
+							"",
+							"pm.test(\"Service Specification\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData['@graph'][1].hasServiceSpecification).to.eql(\"http://localhost:8080/fcrepo/rest/hello/world/v0.0.1/service-specification.yaml\");",
 							"});"
 						],
 						"type": "text/javascript"
@@ -919,6 +1764,11 @@
 						"value": "application/ld+json;",
 						"type": "text",
 						"disabled": true
+					},
+					{
+						"key": "Prefer",
+						"value": "return=representation; include=\"http://fedora.info/definitions/v4/repository#EmbedResources \"",
+						"type": "text"
 					}
 				],
 				"body": {
