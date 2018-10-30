@@ -46,6 +46,21 @@ collection defined in [cpic_integration_tests](tests/tests/fcrepo.postman_collec
 npm run test-it
 ```
 
+This tests starts up the fcreop docker container and executes the postman tests.  Once completed the 
+fcrepo container is destroyed.  If you want to runt he fcrepo and keep it running run the _start_ command
+
+```
+npm start
+``` 
+
+This starts up the fcrepo at http://localhost:8080/fcrepo/rest/.  You can run the postman test via the 
+Postman app or via newman
+
+```
+npm run postman
+```
+
+
 #### Running Example KOs in an Activator
 You can now test the example objects in an activator via a npm script. This script will download the 
 latest released activator and start up the activator using the example repository as it's shelf. 
