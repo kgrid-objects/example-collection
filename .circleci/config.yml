@@ -37,10 +37,6 @@ jobs:
         name: Unit Testing
         command: npm test
 
-    - run:
-        name: Integration Testing
-        command: npm run test-it
-
     # - run:
     #     name: Create CPIC Objects zip ready for deployment
     #     command: npm run package
