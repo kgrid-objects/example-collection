@@ -39,25 +39,6 @@ npm test
 
 ### Integration Testing
 
-#### Postman Testing with Fedora Commons 
-We have some integration testing with Fedora Commons.  We use lite
-[Fedora image](https://hub.docker.com/r/kgrid/fcrepo/) based on [Fedora Docker](https://hub.docker.com/r/yinlinchen/fcrepo4-docker/) 
-which is part of [Fedora Labs](https://github.com/fcrepo4-labs). The test runs [Postman](https://www.getpostman.com/) 
-collection defined in [fcrepo create](tests/fcrepo-create.postman_collection.json) using
- [Newman](https://www.npmjs.com/package/newman)
-
-```
-npm run test-it
-```
-
-The _test-it_ starts up the fcreop docker container and executes the postman tests.  Once completed the 
-fcrepo container is destroyed.  
-
-
-You can run the fcrepo and keep it running via the ```npm start```  command.  This starts up the fcrepo at http://localhost:8080/fcrepo/rest/.  You can run the postman test via the 
-Postman app or via newman ```npm run postman```
-
-
 #### Running Example KOs in an Activator
 You can now test the example objects in an activator via a npm script. This script will download the 
 latest released activator and start up the activator using the example repository as it's shelf. 

@@ -20,17 +20,12 @@
     "jsonpath": "^1.0.0",
     "rewire": "^4.0.1",
     "scripty": "^1.7.2",
-    "shelljs": "^0.8.2",
-    "start-server-and-test": "^1.7.5",
     "vuepress": "^0.14.4"
   },
   "scripts": {
     "test": "jest",
-    "postman": "newman run tests/fcrepo-create.postman_collection.json -e tests/fcrepo-itegration-tests.postman_environment.json --reporters  cli,junit --reporter-junit-export test-results",
     "dev": "node scripts/dev.js",
     "package": "scripty",
-    "test-it": "server-test :8080 postman ",
-    "start": "node scripts/start-fcrepo.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
