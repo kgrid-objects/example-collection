@@ -13,7 +13,8 @@ There are testing and packaging features in this project that require npm, npm i
 
 ### Directories
 
-* **naan-name/** is intended for each knowledge object (e.g. _hello-world_)
+* **collection/** contains one to many directories representing knowledge objects
+  * **naan-name** is intended for each knowledge object (e.g. _hello-world_)
 * **tests/** is for all of your project test scripts
 * **etc/** is a sub-directory for miscellaneous project
 * **docs/** is a sub-directory for more detailed information about these KOs

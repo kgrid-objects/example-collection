@@ -1,17 +1,13 @@
 {
-  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ],
-  "@graph": [
-    {
-      "@id": "hello-world",
-      "@type":"koio:KnowledgeObject",
-      "dc:identifer":"ark:/hello/world",
-      "dc:title":"Hello World Title",
-      "koio:contributors": "Kgrid Team",
-      "dc:description": "Test Hello World ",
-      "koio:keywords": "test hello world",
-      "hasImplementation":[
-        "hello-world/koio.v1"
-      ]
-    }
-  ]
+  "@id": "hello-world",
+  "@type":"koio:KnowledgeObject",
+  "identifier":"ark:/hello/world",
+  "title":"Hello  World Title",
+  "contributors": "Kgrid Team",
+  "description": "Test Hello World ",
+  "keywords": "test hello world",
+  "hasImplementation":[
+    "hello-world/koio/v1"
+  ],
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }
