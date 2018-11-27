@@ -3,4 +3,6 @@ function welcome(inputs){
   return "Welcome to Knowledge Grid, " + name;
 }
 
-module.exports = welcome
+module.exports = {
+  welcome: welcome
+}
