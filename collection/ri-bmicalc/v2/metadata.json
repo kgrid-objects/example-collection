@@ -1,0 +1,12 @@
+{
+  "@id": "v2",
+  "@type": "koio:Implementation",
+  "identifier": "v2",
+  "title": "Implementation of BMI Calculator",
+  "hasServiceSpecification": "v2/service-specification.yaml",
+  "hasDeploymentSpecification": "v2/deployment-specification.yaml",
+  "hasPayload": "v2/bmi.js",
+  "@context": [
+    "http://kgrid.org/koio/contexts/implementation.jsonld"
+  ]
+}
