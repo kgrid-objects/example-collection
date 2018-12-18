@@ -4,7 +4,7 @@ info:
   title: 'Hello, World'
   description: 'hello world'
 servers:
-  - url: '/hello/world/koio/'
+  - url: '/hello/world/koio.v1/'
     description: Hello world
 tags:
   - name: KO Endpoints

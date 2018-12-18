@@ -4,7 +4,7 @@ info:
   title: 'BMI Calc'
   description: 'Calculates BMI'
 servers:
-  - url: '/ri/bmicalc/v0.0.1'
+  - url: '/ri/bmicalc/v2'
     description: BMI Calculator
 tags:
   - name: BMI Calculator Endpoint
