@@ -1,0 +1,13 @@
+{
+  "@id": "99999-fk4n99hh99",
+  "@type":"koio:KnowledgeObject",
+  "identifier":"ark:/99999/fk4n99hh99",
+  "title":"Dalcetrapib ADCY9 Intepretation Recommender for rs1967309",
+  "contributors": "Kgrid Team",
+  "description": "This object accepts as input two base pairs about a person for SNP rs1967309 and returns a recommendation about Dalcetrapib.",
+  "keywords": "",
+  "hasImplementation":[
+    "99999-fk4n99hh99/v0.0.2"
+  ],
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}

@@ -1,0 +1,5 @@
+endpoints:
+  /interpretProstateCancerRisk:
+    adapterType: JAVASCRIPT
+    artifact: rs1967309interpret.js
+    entry: rs1967309interpret

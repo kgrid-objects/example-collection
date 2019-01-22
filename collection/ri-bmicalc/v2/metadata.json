@@ -1,7 +1,7 @@
 {
   "@id": "v2",
   "@type": "koio:Implementation",
-  "identifier": "v2",
+  "identifier": "ark:/ri/bmicalc/v2",
   "title": "Implementation of BMI Calculator",
   "description":"Calculates BMI",
   "keywords":"bmi calculator regenstrief ",
