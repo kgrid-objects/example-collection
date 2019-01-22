@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "docker-run": "^3.1.0",
-    "newman": "^4.1.0",
-    "merge": ">=1.2.1"
+    "merge": ">=1.2.1",
+    "newman": "^4.3.1"
   }
 }
