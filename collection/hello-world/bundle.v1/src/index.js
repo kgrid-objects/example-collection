@@ -1,8 +1,6 @@
-module.exports = {
 
-  welcome: function(inputs){
+function welcome(inputs){
   var name = inputs.name;
   return "Welcome to Knowledge Grid, " + name;
-  }
-
-};
+}
+module.exports=welcome;

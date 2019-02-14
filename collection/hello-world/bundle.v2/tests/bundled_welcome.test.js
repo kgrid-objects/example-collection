@@ -1,14 +1,10 @@
-const base = require('../src/index')
+const welcome = require('../src/index');
 
 test('hello barney (src)', () => {
-
-  expect(
-    base.welcome({"name":"Greg", "language": "Italian"})
-  ).toBe(
-    'Ciao, Greg'
-  )
-
-})
+  expect( welcome(
+      {"name":"Greg", "language": "Italian"}))
+           .toBe('Ciao, Greg')
+});
 
 
 
