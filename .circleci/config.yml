@@ -21,8 +21,6 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
 
-    - setup_remote_docker
-
     - run:
         name: Install Dependencies
         command: npm install
@@ -36,9 +34,21 @@ jobs:
         name: Unit Testing
         command: npm test
 
-    # - run:
-    #     name: Create CPIC Objects zip ready for deployment
-    #     command: npm run package
+    - run:
+        name: Package
+        command: npm run package
+
+    - run:
+      name: Create Release
+      command: |
+
+        if [ $RELEASE ]; then
+            git config --global user.email "$GIT_USER_EMAIL"
+            git config --global user.name "$GIT_USER_NAME"
+
+            .circleci/release.sh
+
+        fi
 
     - run:
         name: Deploy VuePress GitHub Pages
