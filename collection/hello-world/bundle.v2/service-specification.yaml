@@ -2,10 +2,10 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: 'New Hello World'
-  description: 'Hello World with webpack-built payload'
+  description: 'Hello World bundle.v2 with webpack-built payload'
 servers:
-  - url: '/new/hello/v0.0.2/'
-    description: 'Hello World with webpack-built payload'
+  - url: '/hello/world/bundle.v2/'
+    description: 'Hello World bundle.v2 with webpack-built payload'
 tags:
   - name: KO Endpoints
     description: Hello World Endpoints
@@ -13,7 +13,7 @@ paths:
   /welcome:
     post:
       tags:
-       - KO Endpoints
+        - KO Endpoints
       description: Hello
       operationId: hello
       requestBody:
@@ -40,8 +40,8 @@ components:
   schemas:
     input:
       required:
-      - name
-      - language
+        - name
+        - language
       properties:
         name:
           type: string
@@ -51,7 +51,7 @@ components:
           example: spanish
     output:
       required:
-      - result
+        - result
       properties:
         result:
           type: object

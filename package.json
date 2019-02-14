@@ -25,6 +25,7 @@
   },
   "scripts": {
     "test": "jest",
+    "postinstall": "npm install ",
     "dev": "node scripts/dev.js",
     "package": "scripty",
     "docs:dev": "vuepress dev docs",
