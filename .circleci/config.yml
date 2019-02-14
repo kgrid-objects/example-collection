@@ -39,16 +39,15 @@ jobs:
         command: npm run package
 
     - run:
-      name: Create Release
-      command: |
+        name: Create Release
+        command: |
 
-        if [ $RELEASE ]; then
-            git config --global user.email "$GIT_USER_EMAIL"
-            git config --global user.name "$GIT_USER_NAME"
+            if [ $RELEASE ]; then
+               git config --global user.email "$GIT_USER_EMAIL"
+               git config --global user.name "$GIT_USER_NAME"
 
-            .circleci/release.sh
-
-        fi
+               .circleci/release.sh
+            fi
 
     - run:
         name: Deploy VuePress GitHub Pages
