@@ -3,16 +3,12 @@
 # Setup
 rm -rf dist
 mkdir -p dist
-cd collection
 
-for d in * ; do
-    echo "$d"
-    if [ "$d" == "hello-world" ]; then
-        (cd $d; npm run package)
-    else
-       zip -r -X "../dist/$d.zip" $d
-    fi
+(cd "collection/hello-world"; npm run package)
 
-done
+(cd "collection"; zip -r -X "../dist/mvo-kgrid.zip" mvo-kgrid/ )
+(cd "collection"; zip -r -X "../dist/99999-fk4n99hh99.zip" 99999-fk4n99hh99/ )
+(cd "collection"; zip -r -X "../dist/ri-bmicalc.zip" ri-bmicalc/ )
+
 
 
