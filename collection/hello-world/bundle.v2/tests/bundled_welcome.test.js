@@ -3,9 +3,9 @@ const base = require('../src/index')
 test('hello barney (src)', () => {
 
   expect(
-    base.welcome({'name': 'Barney Rubble'})
+    base.welcome({"name":"Greg", "language": "Italian"})
   ).toBe(
-    'Welcome to Knowledge Grid, Barney Rubble'
+    'Ciao, Greg'
   )
 
 })
