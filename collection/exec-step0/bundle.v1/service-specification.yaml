@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: 'Threading tester'
+  description: 'Threading tester bundle.v1 with webpack-built payload'
+servers:
+  - url: '/exec/step0/bundle.v1/'
+    description: 'Threading tester bundle.v1 with webpack-built payload'
+tags:
+  - name: KO Endpoints
+    description: Hello World Endpoints
+paths:
+  /welcome:
+    post:
+      tags:
+        - KO Endpoints
+      description: Hello
+      operationId: hello
+      requestBody:
+        description: inputs
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/input'
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/output'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
+components:
+  schemas:
+    input:
+      required:
+        - name
+        - iterations
+      properties:
+        name:
+          type: string
+          example: Carol
+        iterations:
+          type: number
+          example: 100000
+    output:
+      required:
+        - result
+      properties:
+        result:
+          type: object
+          additionalProperties:
+            type: object
