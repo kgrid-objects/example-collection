@@ -28,7 +28,7 @@ function packageBundledKO (dir) {
   var exitCode = 0;
   console.log('Installing ' + dir + '/package.json');
   execSync('npm install && npm run build', { cwd: dir});
-  fs.copy("bundle.v1/dist/bundle.v1", path.resolve(process.cwd(),"dist/bundle.v1"), function(error){
+  fs.copy("v1.0.0/dist/v1.0.0", path.resolve(process.cwd(),"dist/v1.0.0"), function(error){
     if(error){
       console.error(err);
     } else {

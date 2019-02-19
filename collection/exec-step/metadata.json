@@ -1,13 +1,13 @@
 {
-  "@id": "exec-step0",
+  "@id": "exec-step",
   "@type":"koio:KnowledgeObject",
-  "identifier":"ark:/exec/step0",
+  "identifier":"ark:/exec/step",
   "title":"First child of an object set for testing threading issues",
   "contributors": "Kgrid Team",
   "description": "An object with a variable delay that can be used to check for threading issues when coordinating multiple objects with an executive object",
   "keywords": "test child threading",
   "hasImplementation":[
-    "exec-step0/bundle.v1"
+    "exec-step/v1.0.0"
   ],
   "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }

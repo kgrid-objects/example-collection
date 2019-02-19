@@ -1,0 +1,5 @@
+endpoints:
+  /welcome:
+    adapterType: JAVASCRIPT
+    artifact: main.js
+    entry: welcome

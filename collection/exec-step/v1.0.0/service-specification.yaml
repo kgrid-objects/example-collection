@@ -4,7 +4,7 @@ info:
   title: 'Threading tester'
   description: 'Threading tester bundle.v1 with webpack-built payload'
 servers:
-  - url: '/exec/step0/bundle.v1/'
+  - url: '/exec/step/v1.0.0/'
     description: 'Threading tester bundle.v1 with webpack-built payload'
 tags:
   - name: KO Endpoints

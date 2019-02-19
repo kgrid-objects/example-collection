@@ -4,8 +4,8 @@ const execSync = require('child_process').execSync
 const fs = require('fs-extra');
 
 
-//Starting build distributed hello world KO
-const output = "dist/exec-step0";
+//Starting build distributed exec-step KO
+const output = "dist/exec-step";
 shell.rm('-rf', 'dist');
 shell.mkdir("-p", output);
 
@@ -16,7 +16,12 @@ try {
   console.error(err)
 }
 
-packageBundledKO(path.resolve(process.cwd(),"bundle.v1"));
+packageBundledKO(path.resolve(process.cwd(),"v1.0.0"));
+
+if (shell.exec('(cd dist; zip -r -X ../../../dist/exec-step.zip .)').code !== 0) {
+  shell.echo('Error: Zipping dist');
+  shell.exit(1);
+}
 
 function packageBundledKO (dir) {
   let exitCode = 0;

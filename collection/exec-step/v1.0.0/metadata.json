@@ -1,0 +1,12 @@
+{
+  "@id": "v1.0.0",
+  "@type": "koio:Implementation",
+  "identifier": "ark:/exec/step/v1.0.0",
+  "title": "Implementation v1.0.0 of threading tester",
+  "hasServiceSpecification": "v1.0.0/service-specification.yaml",
+  "hasDeploymentSpecification": "v1.0.0/deployment-specification.yaml",
+  "hasPayload": "v1.0.0/main.js",
+  "@context": [
+    "http://kgrid.org/koio/contexts/implementation.jsonld"
+  ]
+}
