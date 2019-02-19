@@ -28,6 +28,7 @@ function execute(inputs){
       let step = {};
       step.name=stepResponse.name;
       step.correlationId=stepResponse.correlation.id;
+      step.threadsafe=stepResponse.threadsafe.id;
       step.iterations=stepResponse.iterations;
       step.result=stepResponse.result;
       steps.push(step);
