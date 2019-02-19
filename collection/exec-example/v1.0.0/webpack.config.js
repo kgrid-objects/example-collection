@@ -4,9 +4,9 @@ const path = require('path');
 module.exports = {
 
   output: {
-    library: 'welcome',
+    library: 'execute',
     libraryTarget: 'var',
-    path: path.resolve(__dirname, 'dist','bundle.v1'),
+    path: path.resolve(__dirname, 'dist','v1.0.0'),
   },
   module: {
     rules: [

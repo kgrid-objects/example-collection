@@ -1,5 +1,5 @@
 endpoints:
-  /welcome:
+  /execute:
     adapterType: JAVASCRIPT
     artifact: main.js
-    entry: welcome
+    entry: execute
