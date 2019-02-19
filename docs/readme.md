@@ -23,9 +23,9 @@ There are testing and packaging features in this project that require npm, npm i
 * **scriptswin/** windows versions of the scripts
 
 ### Example Knowledge Objects
- * [Hello World](hello-world) - Simple KO designed as a starting point. Demonstrates a project structure the includes unit testing and scripts to package the KO deposit.
- * [BMI Calculator](ri-bmicalc) -  Simple KO designed to calculate BMI based on height and weight.  Demostrates passing mulitple attributes.
- * [Minimum Viable](mvo-kgrid) -  Simple KO designed demostrate the smallest amount of information needed to get KO
+ * [Hello World](https://github.com/kgrid-objects/example-collection/tree/master/collection/hello-world) - Simple KO designed as a starting point. Demonstrates a project structure the includes unit testing and scripts to package the KO deposit.
+ * [BMI Calculator](https://github.com/kgrid-objects/example-collection/tree/master/collection/ri-bmicalc) -  Simple KO designed to calculate BMI based on height and weight.  Demostrates passing mulitple attributes.
+ * [Minimum Viable](https://github.com/kgrid-objects/example-collection/tree/master/collection/mvo-kgrid) -  Simple KO designed demostrate the smallest amount of information needed to get KO
 
 ### Testing
 Sample tests are located in the tests directory and can be executed using _npm_.  These tests utilize
