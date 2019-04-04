@@ -1,0 +1,58 @@
+[
+  {
+    "risk": "low",
+    "gender": "male",
+    "coefficients": {
+      "chd": {
+        "alpha": -22.1,
+        "p": 4.71
+      },
+      "nonchd": {
+        "alpha": -26.7,
+        "p": 5.64
+      }
+    }
+  },
+  {
+    "risk": "low",
+    "gender": "female",
+    "coefficients": {
+      "chd": {
+        "alpha": -29.8,
+        "p": 6.36
+      },
+      "nonchd": {
+        "alpha": -31,
+        "p": 6.62
+      }
+    }
+  },
+  {
+    "risk": "high",
+    "gender": "male",
+    "coefficients": {
+      "chd": {
+        "alpha": -21,
+        "p": 4.62
+      },
+      "nonchd": {
+        "alpha": -25.7,
+        "p": 5.47
+      }
+    }
+  },
+  {
+    "risk": "high",
+    "gender": "female",
+    "coefficients": {
+      "chd": {
+        "alpha": -28.7,
+        "p": 6.23
+      },
+      "nonchd": {
+        "alpha": -30,
+        "p": 6.42
+      }
+    }
+  }
+]

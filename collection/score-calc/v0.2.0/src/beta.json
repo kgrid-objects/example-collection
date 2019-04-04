@@ -1,0 +1,12 @@
+{
+  "chd":{
+    "smoker": 0.71,
+    "cholesterol":0.24,
+    "sbp":0.018
+  },
+  "nonchd":{
+    "smoker": 0.63,
+    "cholesterol":0.02,
+    "sbp":0.022
+  }
+}

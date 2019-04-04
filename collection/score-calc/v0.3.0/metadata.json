@@ -1,0 +1,12 @@
+{
+  "@id" : "v0.3.0",
+  "@type" : "koio:Implementation",
+  "identifier" : "ark:/score/calc/v0.3.0",
+  "title" : "Ten-year Fatal Cardiovascular Risk Calculation based on SCORE project (Example KO - Bundled with a npm package) ",
+  "description" : "Estimating ten-year risk of fatal cardiovascular disease based on SCORE project. This version bundled the javascript code with externalized data files and a Node.js library of 'lodash'",
+  "keywords" : "SCORE, ten-year, Cardiovascular risk, calculation",
+  "hasServiceSpecification" : "v0.3.0/service.yaml",
+  "hasDeploymentSpecification" : "v0.3.0/deployment.yaml",
+  "hasPayload" : "v0.3.0/dist/main.js",
+  "@context" : [ "http://kgrid.org/koio/contexts/implementation.jsonld" ]
+}

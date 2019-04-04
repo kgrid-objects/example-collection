@@ -1,0 +1,12 @@
+{
+  "@id" : "v0.2.0",
+  "@type" : "koio:Implementation",
+  "identifier" : "ark:/score/calc/v0.2.0",
+  "title" : "Ten-year Fatal Cardiovascular Risk Calculation based on SCORE project (Example KO - Bundled with data) ",
+  "description" : "Estimating ten-year risk of fatal cardiovascular disease based on SCORE project. This version bundled the javascript code with externalized data files.",
+  "keywords" : "SCORE, ten-year, Cardiovascular risk, calculation",
+  "hasServiceSpecification" : "v0.2.0/service.yaml",
+  "hasDeploymentSpecification" : "v0.2.0/deployment.yaml",
+  "hasPayload" : "v0.2.0/dist/main.js",
+  "@context" : [ "http://kgrid.org/koio/contexts/implementation.jsonld" ]
+}

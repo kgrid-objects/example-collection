@@ -1,0 +1,79 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: SCORE risk calculation v0.3.0
+  description: SCORE risk calculation v0.3.0.
+servers:
+  - url: /score/calc/v0.3.0
+    description: SCORE risk calculation.
+tags:
+  - name: KO Endpoints
+    description: SCORE risk calculation v0.3.0.
+paths:
+  /score:
+    post:
+      tags:
+        - KO Endpoints
+      description: SCORE risk calculation.
+      operationId: cvdriskscore
+      requestBody:
+        description: inputs
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/input'
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/output'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
+components:
+  schemas:
+    input:
+      required:
+        - age
+        - gender
+        - risk
+        - sbp
+        - cholesterol
+        - smoker
+      properties:
+        age:
+          type: number
+          example: 65
+        gender:
+          type: string
+          enum:
+            - "Male"
+            - "Female"
+          example: "Male"
+        risk:
+          type: string
+          enum:
+            - "high"
+            - "low"
+          example: "high"
+        sbp:
+          type: number
+          example: 180
+        cholesterol:
+          type: number
+          example: 8
+        smoker:
+          type: boolean
+          example: true
+    output:
+      required:
+        - result
+      properties:
+        result:
+          type: object
