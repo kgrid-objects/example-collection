@@ -55,7 +55,7 @@ components:
       required:
         - twoBases
       properties:
-        noRisk:
+        twoBases:
           type: string
           example: AA
     output:

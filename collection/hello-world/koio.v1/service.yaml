@@ -22,14 +22,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/user'
+              $ref: '#/components/schemas/input'
       responses:
         '200':
           description: response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/welcomeOutput'
+                $ref: '#/components/schemas/output'
         default:
           description: unexpected error
           content:
@@ -47,20 +47,21 @@ paths:
         value: welcome
 components:
   schemas:
-    user:
+    input:
       required:
         - name
       properties:
         name:
           type: string
+          x-kgrid-label: 'Please enter your name'
+          x-kgrid-unit: ''
           example: Bob
-    welcomeOutput:
+    output:
       required:
         - result
       properties:
         result:
-          type: string
-          example: welcome
+          type: object
     error:
       required:
         - code

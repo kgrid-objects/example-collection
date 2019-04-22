@@ -55,7 +55,4 @@ function weightedsum(cholesterol, sbp, smoker,beta){
   return w;
 }
 
-module.exports={
-  score:score,
-  riskCoefficients:riskCoefficients
-};
+module.exports=score
