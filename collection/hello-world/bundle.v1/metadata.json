@@ -3,7 +3,7 @@
   "@type": "koio:Implementation",
   "identifier": "ark:/hello/world/bundle.v1",
   "title": "Implementation bundle v1 of Hello World",
-  "hasServiceSpecification": "bundle.v1/service-specification.yaml",
+  "hasServiceSpecification": "bundle.v1/service.yaml",
   "hasDeploymentSpecification": "bundle.v1/deployment-specification.yaml",
   "hasPayload": "bundle.v1/main.js",
   "@context": [

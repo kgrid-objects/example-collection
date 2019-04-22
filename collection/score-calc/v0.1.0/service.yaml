@@ -5,16 +5,13 @@ info:
   description: SCORE risk calculation v0.1.0.
 servers:
   - url: /score/calc/v0.1.0
-    description: SCORE risk calculation.
 tags:
   - name: KO Endpoints
-    description: SCORE risk calculation v0.1.0.
 paths:
   /score:
     post:
       tags:
         - KO Endpoints
-      description: SCORE risk calculation.
       operationId: cvdriskscore
       requestBody:
         description: inputs
@@ -36,6 +33,15 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
+      x-kgrid-artifact:
+        type: String
+        value: score.js
+      x-kgrid-adapterType:
+        type: String
+        value: JAVASCRIPT
+      x-kgrid-entry:
+        type: String
+        value: score
 components:
   schemas:
     input:
@@ -49,31 +55,62 @@ components:
       properties:
         age:
           type: number
-          example: 65
+          x-label: Patient Age
+          x-unit: yr
+          example: 48
         gender:
           type: string
+          x-label: Gender of the patient
+          x-unit: ''
           enum:
-            - "Male"
-            - "Female"
-          example: "male"
+            - Male
+            - Female
+          example: Female
         risk:
           type: string
+          x-label: Choose the population risk level
+          x-unit: ''
           enum:
-            - "high"
-            - "low"
-          example: "high"
+            - high
+            - low
+          example: low
         sbp:
           type: number
-          example: 180
+          x-label: Systolic Blood Pressure
+          x-unit: mmHg
+          example: 120
         cholesterol:
           type: number
-          example: 8
+          x-label: Total Cholesterol
+          x-unit: mg/dL
+          example: 120
         smoker:
           type: boolean
-          example: true
+          x-label: Is the patient a current smoker?
+          x-unit: ''
+          example: false
     output:
+      type: object
       required:
         - result
       properties:
         result:
+          type: object
+          properties:
+            cvdrisk:
+              type: object
+              properties:
+                total:
+                  type: number
+                  x-label: Total CVD Risk
+                  example: 0.12
+                chd:
+                  type: number
+                  x-label: CHD Risk
+                  example: 0.04
+                nonchd:
+                  type: number
+                  x-label: non-CHD Risk
+                  example: 0.08
+        info:
           type: object

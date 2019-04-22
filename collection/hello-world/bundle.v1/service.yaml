@@ -1,61 +1,66 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: 'BMI Calc'
-  description: 'Calculates BMI'
+  title: Hello World Exec v1
+  description: hello world exec v1
 servers:
-  - url: '/ri/bmicalc/v2'
-    description: BMI Calculator
+  - url: /hello/world/bundle.v1/
+    description: Hello world
 tags:
-  - name: BMI Calculator Endpoint
-    description: BMI Endpoints
+  - name: KO Endpoints
+    description: Hello World Exec V1 Endpoints
 paths:
-  /bmicalc:
+  /welcome:
     post:
       tags:
         - KO Endpoints
-      description: BMI Calculator.
-      operationId: bmi
+      description: Welcome.
+      operationId: welcome
       requestBody:
         description: inputs
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/measures'
+              $ref: '#/components/schemas/user'
       responses:
         '200':
           description: response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/bmiOutput'
+                $ref: '#/components/schemas/welcomeOutput'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
+      x-kgrid-artifact:
+        type: String
+        value: main.js
+      x-kgrid-adapterType:
+        type: String
+        value: JAVASCRIPT
+      x-kgrid-entry:
+        type: String
+        value: welcome
 components:
   schemas:
-    measures:
+    user:
       required:
-        - height
-        - weight
+        - name
       properties:
-        height:
-          type: number
-          example: 1.7
-        weight:
-          type: number
-          example: 140.2
-    bmiOutput:
+        name:
+          type: string
+          example: Bob
+    welcomeOutput:
       required:
         - result
       properties:
         result:
-          type: number
-          example: 25
+          type: string
+          example: welcome
     error:
       required:
         - code

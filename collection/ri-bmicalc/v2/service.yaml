@@ -1,64 +1,70 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: 'Example Executive Knowledge Object'
-  description: 'Example Executive Knowledge Object'
+  title: BMI Calc
+  description: Calculates BMI
 servers:
-  - url: '/exec/example/v1.0.0/'
-    description: Example Executive Knowledge Object
+  - url: /ri/bmicalc/v2
+    description: BMI Calculator
 tags:
-  - name: KO Endpoints
-    description: Example Executive Knowledge Object v1.0.0
+  - name: BMI Calculator Endpoint
+    description: BMI Endpoints
 paths:
-  /execute:
+  /bmicalc:
     post:
       tags:
         - KO Endpoints
-      description: Executive Knowledge Object execute endpoint.
-      operationId: executive
+      description: BMI Calculator.
+      operationId: bmi
       requestBody:
         description: inputs
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/workrequest'
+              $ref: '#/components/schemas/measures'
       responses:
         '200':
           description: response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/workresponse'
+                $ref: '#/components/schemas/bmiOutput'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
+      x-kgrid-artifact:
+        type: String
+        value: bmi.js
+      x-kgrid-adapterType:
+        type: String
+        value: JAVASCRIPT
+      x-kgrid-entry:
+        type: String
+        value: bmi_calc
 components:
   schemas:
-    workrequest:
+    measures:
       required:
-        - name
-        - iterations
-        - steps
+        - height
+        - weight
       properties:
-        name:
-          type: string
-          example: 'Test 21'
-        iterations:
-          type: integer
-          example: 100000
-        steps:
-          type: integer
-          example: 5
-    workresponse:
+        height:
+          type: number
+          example: 1.7
+        weight:
+          type: number
+          example: 140.2
+    bmiOutput:
       required:
         - result
       properties:
         result:
-          type: object
+          type: number
+          example: 25
     error:
       required:
         - code

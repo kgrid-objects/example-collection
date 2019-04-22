@@ -23,7 +23,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      'metadata.json', 'service-specification.yaml','deployment-specification.yaml'
+      'metadata.json', 'service.yaml','deployment-specification.yaml'
     ])
   ],
   stats: {

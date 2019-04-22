@@ -3,7 +3,7 @@
     "@type": "koio:Implementation",
     "identifier": "ark:/99999/fk4n99hh99/v0.0.2",
     "title": "Implementation of Dalcetrapib ADCY9 Intepretation Recommender",
-    "hasServiceSpecification": "v0.0.2/service-specification.yaml",
+    "hasServiceSpecification": "v0.0.2/service.yaml",
     "hasDeploymentSpecification": "v0.0.2/deployment-specification.yaml",
     "hasPayload": "v0.0.2/rs1967309interpret.js",
     "@context": [

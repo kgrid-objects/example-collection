@@ -2,9 +2,11 @@ openapi: 3.0.0
 info:
   version: 1.0.0
   title: Dalcetrapib ADCY9 Intepretation Recommender for rs1967309
-  description: This object accepts as input two base pairs about a person for SNP rs1967309 and returns a recommendation about Dalcetrapib
+  description: >-
+    This object accepts as input two base pairs about a person for SNP rs1967309
+    and returns a recommendation about Dalcetrapib
 servers:
-  - url: '/99999/fk4n99hh99/v0.0.2'
+  - url: /99999/fk4n99hh99/v0.0.2
     description: Dalcetrapib ADCY9 Intepretation Recommender for rs1967309
 tags:
   - name: KO Endpoints
@@ -14,7 +16,9 @@ paths:
     post:
       tags:
         - KO Endpoints
-      description: This object accepts as input two base pairs about a person for SNP rs1967309 and returns a recommendation about Dalcetrapib
+      description: >-
+        This object accepts as input two base pairs about a person for SNP
+        rs1967309 and returns a recommendation about Dalcetrapib
       operationId: interp
       requestBody:
         description: inputs
@@ -36,6 +40,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
+      x-kgrid-artifact:
+        type: String
+        value: rs1967309interpret.js
+      x-kgrid-adapterType:
+        type: String
+        value: JAVASCRIPT
+      x-kgrid-entry:
+        type: String
+        value: rs1967309interpret
 components:
   schemas:
     input:
@@ -44,14 +57,16 @@ components:
       properties:
         noRisk:
           type: string
-          example: 'AA'
+          example: AA
     output:
       required:
         - result
       properties:
         result:
           type: string
-          example: 'Prescribe as needed. AA is accociated with a 39% decrease in cardiovascular events.'
+          example: >-
+            Prescribe as needed. AA is accociated with a 39% decrease in
+            cardiovascular events.
     error:
       required:
         - code

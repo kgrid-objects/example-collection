@@ -5,7 +5,7 @@
   "title": "Implementation of BMI Calculator",
   "description":"Calculates BMI",
   "keywords":"bmi calculator regenstrief ",
-  "hasServiceSpecification": "v2/service-specification.yaml",
+  "hasServiceSpecification": "v2/service.yaml",
   "hasDeploymentSpecification": "v2/deployment-specification.yaml",
   "hasPayload": "v2/bmi.js",
   "@context": [

@@ -1,11 +1,11 @@
 openapi: 3.0.0
 info:
   version: 1.0.0
-  title: 'New Hello World'
-  description: 'Hello World bundle.v2 with webpack-built payload'
+  title: Threading tester
+  description: Threading tester bundle.v1 with webpack-built payload
 servers:
-  - url: '/hello/world/bundle.v2/'
-    description: 'Hello World bundle.v2 with webpack-built payload'
+  - url: /exec/step/v1.0.0/
+    description: Threading tester bundle.v1 with webpack-built payload
 tags:
   - name: KO Endpoints
     description: Hello World Endpoints
@@ -36,19 +36,28 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
+      x-kgrid-artifact:
+        type: String
+        value: main.js
+      x-kgrid-adapterType:
+        type: String
+        value: JAVASCRIPT
+      x-kgrid-entry:
+        type: String
+        value: welcome
 components:
   schemas:
     input:
       required:
         - name
-        - language
+        - iterations
       properties:
         name:
           type: string
           example: Carol
-        language:
-          type: string
-          example: spanish
+        iterations:
+          type: number
+          example: 100000
     output:
       required:
         - result

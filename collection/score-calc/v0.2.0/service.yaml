@@ -36,6 +36,15 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
+      x-kgrid-artifact:
+        type: String
+        value: dist/main.js
+      x-kgrid-adapterType:
+        type: String
+        value: JAVASCRIPT
+      x-kgrid-entry:
+        type: String
+        value: score
 components:
   schemas:
     input:
@@ -53,15 +62,15 @@ components:
         gender:
           type: string
           enum:
-            - "Male"
-            - "Female"
-          example: "Male"
+            - Male
+            - Female
+          example: Male
         risk:
           type: string
           enum:
-            - "high"
-            - "low"
-          example: "high"
+            - high
+            - low
+          example: high
         sbp:
           type: number
           example: 180
