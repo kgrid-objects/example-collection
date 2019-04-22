@@ -16,7 +16,7 @@ jobs:
 
     - run:
         name: Install Dependencies
-        command: yarn install
+        command: npm install
 
     - run:
         name: Unit Testing
