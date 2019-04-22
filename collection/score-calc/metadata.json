@@ -7,6 +7,6 @@
   "desription" : "SCORE risk calculation.",
   "citations" : [ "https://academic.oup.com/eurheartj/article/24/11/987/427645" ],
   "keywords" : "SCORE, ten-year, Cardiovascular risk, calculation",
-  "hasImplementation" : [ "score-calc/v0.1.0", "score-calc/v0.2.0", "score-calc/v0.3.0","score-calc/simplified"],
+  "hasImplementation" : [ "score-calc/v0.1.0", "score-calc/v0.2.0", "score-calc/v0.3.0"],
   "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }
