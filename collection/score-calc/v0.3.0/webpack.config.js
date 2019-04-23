@@ -1,6 +1,5 @@
-var path = require('path');
+let path = require('path');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-
 module.exports = {
 
   entry: './src/index.js',
@@ -26,8 +25,8 @@ module.exports = {
   },
 
   plugins: [
-    new BundleAnalyzePlugin({
-      openAnalyzer: false
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'disabled'
     })
   ]
 };

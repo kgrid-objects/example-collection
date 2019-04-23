@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "(cd ./v0.2.0; npm run build) && (cd ./v0.3.0; npm run build)",
-    "package": "npm run build; zip -r ../../dist/score-calc.zip ./ -x '*node_modules*' '*test*' -i '*metadata.json' '*.yaml' '*.js'"
+    "package": "zip -r ../../dist/score-calc.zip ./ -x '*node_modules*' '*test*' -i '*metadata.json' '*.yaml' '*.js'"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "webpack-bundle-analyzer": "^3.3.2"
+  }
 }
