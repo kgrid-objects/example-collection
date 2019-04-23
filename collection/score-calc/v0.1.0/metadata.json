@@ -6,7 +6,6 @@
   "description" : "Estimating ten-year risk of fatal cardiovascular disease based on SCORE project. This version uses  a single plain javascript file as payload.",
   "keywords" : "SCORE, ten-year, Cardiovascular risk, calculation",
   "hasServiceSpecification" : "v0.1.0/service.yaml",
-  "hasDeploymentSpecification" : "v0.1.0/deployment.yaml",
   "hasPayload" : "v0.1.0/score.js",
   "@context" : [ "http://kgrid.org/koio/contexts/implementation.jsonld" ]
 }

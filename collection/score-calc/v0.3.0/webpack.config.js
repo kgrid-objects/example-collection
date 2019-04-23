@@ -26,6 +26,8 @@ module.exports = {
   },
 
   plugins: [
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzePlugin({
+      openAnalyzer: false
+    })
   ]
 };
