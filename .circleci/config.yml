@@ -33,6 +33,10 @@ jobs:
            cd collection/score-calc/v0.2.0
            npm install
            npm run build
+           cd collection/score-calc/v0.3.0
+           npm install
+           npm run build
+           cd collection/score-calc
            npm run package
 
     - run:
