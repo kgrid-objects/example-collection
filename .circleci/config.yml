@@ -16,7 +16,9 @@ jobs:
 
     - run:
         name: Install Dependencies
-        command: npm install
+        command: |
+          npm install webpack webpack-cli -g
+          npm install
 
     - run:
         name: Unit Testing
