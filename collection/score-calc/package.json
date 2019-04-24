@@ -9,6 +9,6 @@
     "postinstall": "(cd ./v0.2.0; npm install) && (cd ./v0.3.0; npm install)"
   },
   "author": "",
-  "license": "ISC",
+  "license": "ISC"
 
 }
