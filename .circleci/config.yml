@@ -16,9 +16,7 @@ jobs:
 
     - run:
         name: Install Dependencies
-        command: |
-          sudo npm install webpack webpack-cli -g
-          npm install
+        command: npm install
 
     - run:
         name: Unit Testing
@@ -27,6 +25,15 @@ jobs:
     - run:
         name: Package
         command: npm run package
+
+
+    - run:
+        name: Score
+        command: |
+        cd collection/score-calc/v0.2.0
+        npm install
+        npm run build
+        npm run package
 
     - run:
         name: Deploy KOs to Chipmunk
