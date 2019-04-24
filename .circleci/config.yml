@@ -44,10 +44,6 @@ jobs:
                .circleci/release.sh
             fi
 
-    - run:
-        name: Deploy VuePress GitHub Pages
-        command: |
-            chmod 777 .circleci/vuepress_deploy.sh && .circleci/vuepress_deploy.sh
 
     - store_artifacts:
         path: dist
