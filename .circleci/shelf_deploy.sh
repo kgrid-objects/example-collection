@@ -9,7 +9,7 @@ for zipFile in *.zip
 do
   echo -e "Processing $zipFile"
   fileName=${zipFile%%.*}
-  curl -X PUT "${shelfUrl}/${fileName//-//}"\
+  curl -X POST "${shelfUrl}" \
            -H "Content-Type: multipart/form-data" \
            -F "ko=@$zipFile"
 done
