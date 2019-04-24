@@ -26,12 +26,6 @@ jobs:
         name: Package
         command: npm run package
 
-
-    - run:
-        name: Score
-        command: |
-           (cd collection/score-calc; npm install; npm run build; npm run package)
-
     - run:
         name: Deploy KOs to Chipmunk
         command: |
