@@ -26,8 +26,7 @@
     "test": "jest",
     "dev": "node scripts/dev.js",
     "package": "scripty",
-    "walk": "node scripts/try.js",
-    "mergespecs": "node ../../scripts/mergespecs.js",
+    "mergespecs": "node scripts/mergespecs.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },

@@ -37,9 +37,9 @@ paths:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
       x-kgrid-activation:
-        artifact: 'dist/main.js'
-        adapter: 'JAVASCRIPT'
-        entry: 'welcome'
+        adapter: JAVASCRIPT
+        artifact: main.js
+        entry: welcome
 components:
   schemas:
     input:
