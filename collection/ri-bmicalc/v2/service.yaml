@@ -36,6 +36,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
+      x-kgrid-activation:
+        artifact: 'bmi.js'
+        adapter: 'JAVASCRIPT'
+        entry: 'bmi_calc'
       x-kgrid-artifact:
         type: String
         value: bmi.js
@@ -54,10 +58,12 @@ components:
       properties:
         height:
           type: number
+          x-kgrid-unit: 'm'
           example: 1.7
         weight:
           type: number
-          example: 140.2
+          x-kgrid-unit: 'kg'
+          example: 70.2
     bmiOutput:
       required:
         - result

@@ -36,15 +36,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
-      x-kgrid-artifact:
-        type: String
-        value: main.js
-      x-kgrid-adapterType:
-        type: String
-        value: JAVASCRIPT
-      x-kgrid-entry:
-        type: String
-        value: execute
+      x-kgrid-activation:
+        artifact: 'main.js'
+        adapter: 'JAVASCRIPT'
+        entry: 'execute'
 components:
   schemas:
     workrequest:

@@ -40,6 +40,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
+      x-kgrid-activation:
+        artifact: 'rs1967309interpret.js'
+        adapter: 'JAVASCRIPT'
+        entry: 'rs1967309interpret'
       x-kgrid-artifact:
         type: String
         value: rs1967309interpret.js
@@ -57,6 +61,7 @@ components:
       properties:
         twoBases:
           type: string
+          enum: ['AA','GA','GG']
           example: AA
     output:
       required:

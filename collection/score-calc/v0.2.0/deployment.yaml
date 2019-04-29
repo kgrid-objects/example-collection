@@ -1,5 +1,0 @@
-endpoints:
-  /score:
-    adapterType: JAVASCRIPT
-    artifact: dist/main.js
-    entry: score
