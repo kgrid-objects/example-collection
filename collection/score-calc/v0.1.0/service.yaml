@@ -37,15 +37,6 @@ paths:
         artifact: 'score.js'
         adapter: 'JAVASCRIPT'
         entry: 'score'
-      x-kgrid-artifact:
-        type: String
-        value: score.js
-      x-kgrid-adapterType:
-        type: String
-        value: JAVASCRIPT
-      x-kgrid-entry:
-        type: String
-        value: score
 components:
   schemas:
     input:

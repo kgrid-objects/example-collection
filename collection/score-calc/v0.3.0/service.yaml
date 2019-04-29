@@ -40,15 +40,6 @@ paths:
         artifact: 'dist/main.js'
         adapter: 'JAVASCRIPT'
         entry: 'score'
-      x-kgrid-artifact:
-        type: String
-        value: 'dist/main.js'
-      x-kgrid-adapterType:
-        type: String
-        value: JAVASCRIPT
-      x-kgrid-entry:
-        type: String
-        value: score
 components:
   schemas:
     input:

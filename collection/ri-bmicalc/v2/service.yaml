@@ -40,15 +40,6 @@ paths:
         artifact: 'bmi.js'
         adapter: 'JAVASCRIPT'
         entry: 'bmi_calc'
-      x-kgrid-artifact:
-        type: String
-        value: bmi.js
-      x-kgrid-adapterType:
-        type: String
-        value: JAVASCRIPT
-      x-kgrid-entry:
-        type: String
-        value: bmi_calc
 components:
   schemas:
     measures:

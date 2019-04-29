@@ -44,15 +44,6 @@ paths:
         artifact: 'rs1967309interpret.js'
         adapter: 'JAVASCRIPT'
         entry: 'rs1967309interpret'
-      x-kgrid-artifact:
-        type: String
-        value: rs1967309interpret.js
-      x-kgrid-adapterType:
-        type: String
-        value: JAVASCRIPT
-      x-kgrid-entry:
-        type: String
-        value: rs1967309interpret
 components:
   schemas:
     input:
