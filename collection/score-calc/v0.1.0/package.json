@@ -1,0 +1,16 @@
+{
+  "name": "score-calc",
+  "version": "0.1.0",
+  "description": "Ten-year Fatal Cardiovascular Risk Calculation",
+  "main": " ",
+  "scripts": {
+    "test": "jest",
+    "package": "(cd ../../; zip score-calc/score-calc.zip  score-calc score-calc/metadata.json; zip -gr score-calc/score-calc.zip score-calc/v0.1.0 -x '*node_modules*' '*test*' -i 'score-calc/metadata.json' '*metadata.json' '*.yaml' '*.js')"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^24.7.1",
+    "rewire": "^4.0.1"
+  }
+}
