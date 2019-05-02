@@ -1,5 +1,5 @@
 {
-  "name": "@kgrid/score-calc",
+  "name": "score-calc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
