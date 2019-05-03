@@ -22,7 +22,7 @@ jobs:
         name: Unit Testing
         environment:
            JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
-        command: jest --reporters=default --reporters=jest-junit
+        command: npm test
 
     - run:
         name: Package

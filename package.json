@@ -23,7 +23,7 @@
     "scripty": "^1.7.2"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --reporters=default --reporters=jest-junit\n",
     "dev": "node scripts/dev.js",
     "package": "scripty",
     "mergespecs": "node scripts/mergespecs.js",
