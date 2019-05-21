@@ -6,7 +6,7 @@ module.exports = {
   output: {
     library: 'welcome',
     libraryTarget: 'var',
-    path: path.resolve(__dirname, 'dist','bundle.v1'),
+    path: path.resolve(__dirname, 'dist','v0.2.0'),
   },
   module: {
     rules: [

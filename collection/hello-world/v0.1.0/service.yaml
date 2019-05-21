@@ -4,7 +4,7 @@ info:
   title: 'Hello, World'
   description: hello world
 servers:
-  - url: /hello/world/koio.v1/
+  - url: /hello/world/v0.1.0/
     description: Hello world
 tags:
   - name: KO Endpoints
@@ -37,7 +37,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/error'
       x-kgrid-activation:
-        artifact: 'welcome.js'
+        artifact: 'src/index.js'
         adapter: 'JAVASCRIPT'
         entry: 'welcome'
 components:

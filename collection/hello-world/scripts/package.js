@@ -16,10 +16,10 @@ try {
   console.error(err)
 }
 
-//koio.v1
+//v0.1.0
 try {
-  fs.copySync( path.resolve(process.cwd(), "koio.v1"),
-      path.resolve(process.cwd(),output.toString(), "koio.v1"));
+  fs.copySync( path.resolve(process.cwd(), "v0.1.0"),
+      path.resolve(process.cwd(),output.toString(), "v0.1.0"));
 
 } catch (err){
   console.error(err)
@@ -27,7 +27,7 @@ try {
 
 packageBundledKO(path.resolve(process.cwd(),"bundle.v1"));
 
-packageBundledKO(path.resolve(process.cwd(),"bundle.v2"));
+packageBundledKO(path.resolve(process.cwd(),"v0.3.0"));
 
 if (shell.exec('(cd dist; zip -r -X ../../../dist/hello-world.zip .)').code !== 0) {
   shell.echo('Error: Zipping dist');

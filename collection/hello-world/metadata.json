@@ -7,7 +7,7 @@
   "description": "Test Hello World ",
   "keywords": "test hello world",
   "hasImplementation":[
-    "hello-world/koio.v1","hello-world/bundle.v1","hello-world/bundle.v2"
+    "hello-world/v0.1.0","hello-world/v0.2.0","hello-world/v0.3.0"
   ],
   "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }

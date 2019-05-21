@@ -1,5 +1,5 @@
 {
-  "name": "bundle.v1",
+  "name": "v0.2.0",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -27,6 +27,7 @@
   "dependencies": {
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
+    "jest": "^24.7.1",
     "style-loader": "^0.23.1"
   }
 }
