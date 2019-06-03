@@ -15,6 +15,10 @@ jobs:
     - checkout
 
     - run:
+        name: Install KGrid CLI
+        command: sudo npm install -g @kgrid/cli
+
+    - run:
         name: Install Dependencies
         command: npm install
 
