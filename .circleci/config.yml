@@ -29,6 +29,10 @@ jobs:
         command: npm test
 
     - run:
+        name: Build
+        command: npm run build
+
+    - run:
         name: Package
         command: npm run package
 
@@ -37,7 +41,7 @@ jobs:
         command: |
           .circleci/shelf_deploy.sh https://kgrid-activator.herokuapp.com dist
           curl --write-out '%{http_code}' --silent --output /dev/null  https://kgrid-activator.herokuapp.com/activate
-          .circleci/shelf_deploy.sh https://kgrid-library.herokuapp.com/shelf dist
+          .circleci/shelf_deploy.sh https://kgrid-library.herokuapp.com/shelf collection
 
     - run:
         name: Create Release

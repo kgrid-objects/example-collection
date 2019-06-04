@@ -1,4 +1,3 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -6,7 +5,7 @@ module.exports = {
   output: {
     library: 'execute',
     libraryTarget: 'var',
-    path: path.resolve(__dirname, 'dist','v1.0.0'),
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
@@ -21,11 +20,6 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new CopyWebpackPlugin([
-      'metadata.json', 'service.yaml','deployment-specification.yaml'
-    ])
-  ],
   stats: {
     colors: true
   },

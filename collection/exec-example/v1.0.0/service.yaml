@@ -38,7 +38,7 @@ paths:
                 $ref: '#/components/schemas/error'
       x-kgrid-activation:
         adapter: JAVASCRIPT
-        artifact: main.js
+        artifact: dist/main.js
         entry: execute
 components:
   schemas:

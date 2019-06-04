@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "node scripts/package.js"
+    "package": "(kgrid package hello-world) && (cd ./v0.2.0; kgrid package) && (cd ./v0.3.0; kgrid package)",
+    "build": "(cd ./v0.2.0; npm run build) && (cd ./v0.3.0;  npm run  build)",
+    "postinstall": "(cd ./v0.2.0; npm install) && (cd ./v0.3.0; npm install)"
   },
   "keywords": [
     "hello",

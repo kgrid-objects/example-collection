@@ -23,9 +23,12 @@
     "scripty": "^1.7.2"
   },
   "scripts": {
-    "test": "jest --reporters=default --reporters=jest-junit\n",
-    "dev": "node scripts/dev.js",
+    "clean": "scripty",
+    "postinstall": "scripty",
+    "build": "scripty",
     "package": "scripty",
+    "test": "jest --reporters=default --reporters=jest-junit",
+    "dev": "node scripts/dev.js",
     "mergespecs": "node scripts/mergespecs.js",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"

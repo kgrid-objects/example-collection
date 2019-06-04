@@ -4,7 +4,7 @@
   "identifier" : "ark:/score/calc",
   "title" : "Ten-year Fatal Cardiovascular Risk Calculation based on SCORE project (Example KO) ",
   "contributors" : "KGRID TEAM",
-  "desription" : "SCORE risk calculation.",
+  "description" : "SCORE risk calculation.",
   "citations" : [ "https://academic.oup.com/eurheartj/article/24/11/987/427645" ],
   "keywords" : "SCORE, ten-year, Cardiovascular risk, calculation",
   "hasImplementation" : [ "score-calc/v0.1.0", "score-calc/v0.2.0", "score-calc/v0.3.0"],

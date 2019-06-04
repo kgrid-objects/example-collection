@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "(cd ./v0.2.0; npm run build) && (cd ./v0.3.0; npm run build)",
-    "package": "(cd ../; zip -r ../dist/score-calc.zip score-calc -x '*node_modules*' '*test*' -i '*metadata.json' '*.yaml' '*.js')",
     "postinstall": "(cd ./v0.2.0; npm install) && (cd ./v0.3.0; npm install)"
   },
   "author": "",
