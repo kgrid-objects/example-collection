@@ -12,8 +12,8 @@ echo Release $RELEASE_ID created
 
 echo "Upload artifacts to release $RELEASE_ID"
 
-cd dist
-for file in *
+cd collection
+for file in *.zip
    do
      echo -e "Upload $file"
      curl -X POST "https://uploads.github.com/repos/kgrid-objects/example-collection/releases/$RELEASE_ID/assets?access_token=$GITHUB_TOKEN&name=$file" \
