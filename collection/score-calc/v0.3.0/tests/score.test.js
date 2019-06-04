@@ -47,9 +47,4 @@ test('Male smoker 40', () => {
     expect(scoreFunction(inputs).cvdrisk).toEqual(outputs.cvdrisk);
 
 });
-test('Male smoker 40', () => {
 
-    expect( fs.existsSync( path.join(
-        '/var/folders/dk/kvk31kf116z4_4cn4vv1n9hsp_bf8c/T/tmp-11151MPNXGAxN1Ryy', "grid", "activator", "kgrid-activator-1.0.9.jar") )).toBe(true);
-
-});
