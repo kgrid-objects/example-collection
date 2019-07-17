@@ -1,11 +1,8 @@
 #!/usr/bin/env sh
 
 cd collection
-kgrid package hello-world
-kgrid package ri-bmicalc
-kgrid package score-calc
-kgrid package exec-step
-kgrid package exec-example
-
-
-
+kgrid package ark:/hello/world
+kgrid package ark:/ri/bmicalc
+kgrid package ark:/score/calc
+kgrid package ark:/exec/step
+kgrid package ark:/exec/example
