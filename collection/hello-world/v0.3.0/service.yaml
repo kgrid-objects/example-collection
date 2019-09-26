@@ -3,6 +3,14 @@ info:
   version: 1.0.0
   title: New Hello World
   description: Hello World v0.3.0 with webpack-built payload
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
   - url: /hello/world/v0.3.0/
     description: Hello World v0.3.0 with webpack-built payload
@@ -37,9 +45,9 @@ paths:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
       x-kgrid-activation:
-        artifact: 'dist/main.js'
-        adapter: 'JAVASCRIPT'
-        entry: 'welcome'
+        artifact: dist/main.js
+        adapter: JAVASCRIPT
+        entry: welcome
 components:
   schemas:
     input:
@@ -49,13 +57,20 @@ components:
       properties:
         name:
           type: string
-          x-kgrid-label: 'Please enter your name'
+          x-kgrid-label: Please enter your name
           x-kgrid-unit: ''
           example: Carol
         language:
           type: string
-          enum: ['English','French', 'German','Italian','Portuguese','Spanish','Turkish' ]
-          x-kgrid-label: 'Please select your language'
+          enum:
+            - English
+            - French
+            - German
+            - Italian
+            - Portuguese
+            - Spanish
+            - Turkish
+          x-kgrid-label: Please select your language
           x-kgrid-unit: ''
           example: Spanish
     output:

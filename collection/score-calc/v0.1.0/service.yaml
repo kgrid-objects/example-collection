@@ -3,6 +3,14 @@ info:
   version: 1.0.0
   title: SCORE risk calculation v0.1.0
   description: SCORE risk calculation v0.1.0.
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
   - url: /score/calc/v0.1.0
 tags:
@@ -34,9 +42,9 @@ paths:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
       x-kgrid-activation:
-        artifact: 'score.js'
-        adapter: 'JAVASCRIPT'
-        entry: 'score'
+        artifact: score.js
+        adapter: JAVASCRIPT
+        entry: score
 components:
   schemas:
     input:

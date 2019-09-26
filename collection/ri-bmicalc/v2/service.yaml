@@ -3,6 +3,14 @@ info:
   version: 1.0.0
   title: BMI Calc
   description: Calculates BMI
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
   - url: /ri/bmicalc/v2
     description: BMI Calculator
@@ -37,9 +45,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/error'
       x-kgrid-activation:
-        artifact: 'bmi.js'
-        adapter: 'JAVASCRIPT'
-        entry: 'bmi_calc'
+        artifact: bmi.js
+        adapter: JAVASCRIPT
+        entry: bmi_calc
 components:
   schemas:
     measures:
@@ -49,11 +57,11 @@ components:
       properties:
         height:
           type: number
-          x-kgrid-unit: 'm'
+          x-kgrid-unit: m
           example: 1.7
         weight:
           type: number
-          x-kgrid-unit: 'kg'
+          x-kgrid-unit: kg
           example: 70.2
     bmiOutput:
       required:

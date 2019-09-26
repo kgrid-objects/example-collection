@@ -5,6 +5,14 @@ info:
   description: >-
     This object accepts as input two base pairs about a person for SNP rs1967309
     and returns a recommendation about Dalcetrapib
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
   - url: /99999/fk4n99hh99/v0.0.2
     description: Dalcetrapib ADCY9 Intepretation Recommender for rs1967309
@@ -41,9 +49,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/error'
       x-kgrid-activation:
-        artifact: 'rs1967309interpret.js'
-        adapter: 'JAVASCRIPT'
-        entry: 'rs1967309interpret'
+        artifact: rs1967309interpret.js
+        adapter: JAVASCRIPT
+        entry: rs1967309interpret
 components:
   schemas:
     input:
@@ -52,7 +60,10 @@ components:
       properties:
         twoBases:
           type: string
-          enum: ['AA','GA','GG']
+          enum:
+            - AA
+            - GA
+            - GG
           example: AA
     output:
       required:
