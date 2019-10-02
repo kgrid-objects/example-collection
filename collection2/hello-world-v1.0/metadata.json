@@ -1,0 +1,13 @@
+{
+  "@id": "hello-world",
+  "@type":"koio:KnowledgeObject",
+  "identifier":"ark:/hello/world",
+  "version":"v1.0",
+  "title": "Hello world",
+  "description":"An example of Knowledge Object",
+  "keywords":["Hello","example"],
+  "hasServiceSpecification": "service.yaml",
+  "hasDeploymentSpecification": "$.paths.*.x-kgrid-activation",
+  "hasPayload": "$.paths.*.x-kgrid-activation.artifact",
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}

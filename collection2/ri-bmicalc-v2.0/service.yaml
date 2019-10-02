@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: BMI Calc
+  description: Calculates BMI
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
+servers:
+  - url: /ri/bmicalc
+    description: BMI Calculator
+tags:
+  - name: BMI Calculator Endpoint
+    description: BMI Endpoints
+paths:
+  /bmicalc:
+    post:
+      tags:
+        - KO Endpoints
+      description: BMI Calculator.
+      operationId: bmi
+      requestBody:
+        description: inputs
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/measures'
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/bmiOutput'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+      x-kgrid-activation:
+        artifact: bmi.js
+        adapter: JAVASCRIPT
+        entry: bmicalc
+components:
+  schemas:
+    measures:
+      required:
+        - height
+        - weight
+      properties:
+        height:
+          type: number
+          x-kgrid-unit: m
+          example: 1.7
+        weight:
+          type: number
+          x-kgrid-unit: kg
+          example: 70.2
+    bmiOutput:
+      required:
+        - result
+      properties:
+        result:
+          type: number
+          example: 25
+    error:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string

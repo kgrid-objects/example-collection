@@ -1,0 +1,12 @@
+{
+  "@id": "ri-bmicalc",
+  "@type":"koio:KnowledgeObject",
+  "identifier": "ark:/ri/bmicalc",
+  "version":"v2.0",
+  "title": "Implementation of BMI Calculator",
+  "description":"Calculates BMI",
+  "keywords":["bmi", "calculator", "regenstrief"],
+  "hasServiceSpecification": "service.yaml",
+  "hasPayload": "bmi.js",
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}
