@@ -1,4 +1,4 @@
-var welcome =
+module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -94,7 +94,7 @@ var welcome =
 /*! exports provided: data, default */
 /***/ (function(module) {
 
-module.exports = {"data":[{"language":"Spanish","speakers":"427 million","hello":"Hola"},{"language":"English","speakers":"339 million","hello":"Hello"},{"language":"Portuguese","speakers":"202 million","hello":"Ola"},{"language":"German","speakers":"77 million","hello":"Hallo"},{"language":"French","speakers":"76 million","hello":"Bonjour"},{"language":"Turkish","speakers":"71 million","hello":"Merhaba"},{"language":"Italian","speakers":"63 million","hello":"Ciao"}]};
+module.exports = JSON.parse("{\"data\":[{\"language\":\"Spanish\",\"speakers\":\"427 million\",\"hello\":\"Hola\"},{\"language\":\"English\",\"speakers\":\"339 million\",\"hello\":\"Hello\"},{\"language\":\"Portuguese\",\"speakers\":\"202 million\",\"hello\":\"Ola\"},{\"language\":\"German\",\"speakers\":\"77 million\",\"hello\":\"Hallo\"},{\"language\":\"French\",\"speakers\":\"76 million\",\"hello\":\"Bonjour\"},{\"language\":\"Turkish\",\"speakers\":\"71 million\",\"hello\":\"Merhaba\"},{\"language\":\"Italian\",\"speakers\":\"63 million\",\"hello\":\"Ciao\"}]}");
 
 /***/ }),
 

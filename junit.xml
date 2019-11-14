@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="10" failures="0" time="11.489">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-10-01T20:04:55" time="3.463" tests="2">
+    <testcase classname=" Female non-smoker 65" name=" Female non-smoker 65" time="0.013">
+    </testcase>
+    <testcase classname=" Male smoker 40" name=" Male smoker 40" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-10-01T20:04:55" time="3.625" tests="2">
+    <testcase classname=" Female non-smoker 65" name=" Female non-smoker 65" time="0.022">
+    </testcase>
+    <testcase classname=" Male smoker 40" name=" Male smoker 40" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-10-01T20:04:58" time="0.296" tests="1">
+    <testcase classname=" hello barney (src)" name=" hello barney (src)" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-10-01T20:04:59" time="0.311" tests="1">
+    <testcase classname=" hello barney (src)" name=" hello barney (src)" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-10-01T20:04:59" time="0.306" tests="1">
+    <testcase classname=" hello barney (src)" name=" hello barney (src)" time="0.002">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-10-01T20:04:55" time="5.159" tests="2">
+    <testcase classname=" Female non-smoker 65" name=" Female non-smoker 65" time="0.013">
+    </testcase>
+    <testcase classname=" Male smoker 40" name=" Male smoker 40" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2019-10-01T20:04:58" time="1.998" tests="1">
+    <testcase classname=" hello barney (src)" name=" hello barney (src)" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
