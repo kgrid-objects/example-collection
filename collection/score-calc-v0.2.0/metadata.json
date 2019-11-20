@@ -1,0 +1,13 @@
+{
+  "@id": "score-calc",
+  "@type":"koio:KnowledgeObject",
+  "identifier" : "ark:/score/calc",
+  "version":"v0.2.0",
+  "title" : "Ten-year Fatal Cardiovascular Risk Calculation based on SCORE project (Example KO - Bundled with data) ",
+  "description" : "Estimating ten-year risk of fatal cardiovascular disease based on SCORE project. This version bundled the javascript code with externalized data files.",
+  "keywords" : ["SCORE, ten-year", "Cardiovascular risk", "calculation"],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification": "service.yaml",
+  "hasPayload": "dist/main.js",
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}
