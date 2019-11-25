@@ -32,9 +32,9 @@ jobs:
         name: Build
         command: npm run build
 
-    - run:
-        name: Package
-        command: npm run package
+    # - run:
+    #     name: Package
+    #     command: npm run package
 
     - run:
         name: Deploy KOs to Chipmunk
