@@ -4,7 +4,7 @@ shelfUrl=$1
 zipLocation=$2
 
 cd $zipLocation
-echo $zipLocation
+
 for zipFile in *.zip
 do
   echo -e "Processing $zipFile"
