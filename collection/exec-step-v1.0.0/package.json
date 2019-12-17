@@ -18,7 +18,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
-    "copy-webpack-plugin": "^4.6.0",
+    "copy-webpack-plugin": "^5.1.1",
     "superheroes": "^2.0.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.2.3",
