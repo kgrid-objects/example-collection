@@ -1,12 +1,12 @@
 {"manifest":[
-  "file:exec-example-v1.0.0",
-  "file:exec-step-v1.0.0",
-  "file:hello-proxy-v1.0",
+  "file:exec-example-v1.0.0.zip",
+  "file:exec-step-v1.0.0.zip",
+  "file:hello-proxy-v1.0.zip",
   "file:hello-world-v1.0.zip",
   "file:hello-world-v1.0.zip",
-  "file:ri-bmicalc-v2.0",
-  "file:rs1967309",
-  "file:score-calc-v0.1.0",
-  "file:score-calc-v0.2.0",
-  "file:score-calc-v0.3.0"
+  "file:ri-bmicalc-v2.0.zip",
+  "file:rs1967309.zip",
+  "file:score-calc-v0.1.0.zip",
+  "file:score-calc-v0.2.0.zip",
+  "file:score-calc-v0.3.0.zip"
 ]}
