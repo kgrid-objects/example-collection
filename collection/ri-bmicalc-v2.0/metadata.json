@@ -7,6 +7,7 @@
   "description":"Calculates BMI",
   "keywords":["bmi", "calculator", "regenstrief"],
   "hasServiceSpecification": "service.yaml",
+  "hasDeploymentSpecification": "service.yaml",
   "hasPayload": "bmi.js",
   "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }
