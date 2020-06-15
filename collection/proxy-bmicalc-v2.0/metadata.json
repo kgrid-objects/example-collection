@@ -1,0 +1,13 @@
+{
+  "@id": "proxy-bmicalc",
+  "@type":"koio:KnowledgeObject",
+  "identifier": "ark:/proxy/bmicalc",
+  "version":"v2.0",
+  "title": "Implementation of BMI Calculator to be activated in the remote NodeJS runtime",
+  "description":"Calculates BMI",
+  "keywords":["proxy","bmi", "calculator"],
+  "hasServiceSpecification": "service.yaml",
+  "hasDeploymentSpecification": "service.yaml",
+  "hasPayload": "bmi.js",
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}

@@ -1,0 +1,21 @@
+{
+    "@id": "proxy-executive",
+    "@type": "koio:KnowledgeObject",
+    "identifier": "ark:/proxy/executive",
+    "version": "1.0.0",
+    "title": "Sample Executive Object to be activated in the remote NodeJS runtime",
+    "contributors": "Kgrid Team",
+    "description": "Executive Object to call context to retrieve executor",
+    "keywords": [
+        "proxy",
+        "executie"
+    ],
+    "hasServiceSpecification": "service.yaml",
+    "hasDeploymentSpecification": "service.yaml",
+    "hasPayload": [
+        "src/index.js"
+    ],
+    "@context": [
+        "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
+    ]
+}
