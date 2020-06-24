@@ -47,7 +47,7 @@ paths:
       x-kgrid-activation:
         artifact: bmi.js
         adapter: JAVASCRIPT
-        entry: bmicalc
+        function: bmicalc
 components:
   schemas:
     measures:

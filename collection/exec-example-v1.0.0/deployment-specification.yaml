@@ -2,4 +2,4 @@ endpoints:
   /execute:
     adapterType: JAVASCRIPT
     artifact: ./dist/main.js
-    entry: execute
+    function: execute

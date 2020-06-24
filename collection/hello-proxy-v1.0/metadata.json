@@ -4,7 +4,7 @@
   "title" : "the best hello world ever",
   "identifier" : "ark:/hello/proxy",
   "version" : "v1.0",
-  "description": "A native node js object run through the proxy adapter with one artifact",
+  "description" : "A native node js object run through the proxy adapter with one artifact",
   "contributors" : "Kgrid Team",
   "keywords" : [ "Hello", "example" ],
   "hasServiceSpecification" : "service.yaml",

@@ -51,7 +51,7 @@ paths:
       x-kgrid-activation:
         artifact: rs1967309interpret.js
         adapter: JAVASCRIPT
-        entry: rs1967309interpret
+        function: rs1967309interpret
 components:
   schemas:
     input:

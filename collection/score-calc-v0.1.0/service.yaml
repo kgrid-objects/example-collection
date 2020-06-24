@@ -44,7 +44,7 @@ paths:
       x-kgrid-activation:
         artifact: score.js
         adapter: JAVASCRIPT
-        entry: score
+        function: score
 components:
   schemas:
     input:

@@ -47,7 +47,7 @@ paths:
       x-kgrid-activation:
         adapter: JAVASCRIPT
         artifact: dist/main.js
-        entry: execute
+        function: execute
 components:
   schemas:
     workrequest:
