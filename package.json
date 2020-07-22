@@ -24,6 +24,7 @@
   },
   "scripts": {
     "clean": "scripty",
+    "postinstall":"scripty",
     "build": "scripty",
     "package": "scripty",
     "test": "jest --reporters=default --reporters=jest-junit",
