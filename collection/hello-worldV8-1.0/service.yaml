@@ -1,8 +1,8 @@
 openapi: 3.0.2
 info:
   version: '1.0'
-  title: New Hello world
-  description: Hello world v1.0 with webpack-built payload
+  title: Hello World V8
+  description: Hello world v1.0 with for V8 Adapter
   license:
     name: GNU General Public License v3 (GPL-3)
     url: >-
@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /hello/world/
+  - url: /hello/worldV8/
     description: Hello world
 tags:
   - name: KO Endpoints
@@ -45,7 +45,7 @@ paths:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
       x-kgrid-activation:
-        artifact: dist/main.js
+        artifact: src/index.js
         adapter: V8
         function: welcome
 components:

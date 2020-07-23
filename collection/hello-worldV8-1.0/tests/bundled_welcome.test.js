@@ -1,4 +1,4 @@
-const welcome = require('../src/index');
+V8const welcome = require('../src/index');
 
 test('hello barney (src)', () => {
   expect( welcome(

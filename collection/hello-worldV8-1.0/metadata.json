@@ -1,8 +1,8 @@
 {
-  "@id": "hello-world",
+  "@id": "hello-worldV8",
   "@type":"koio:KnowledgeObject",
-  "identifier":"ark:/hello/world",
-  "version":"v1.3",
+  "identifier":"ark:/hello/worldV8",
+  "version":"v1.0",
   "title": "Implementation of bundled Hello KGrid",
   "description":"An example of bundled KO",
   "keywords":["Hello","example"],
