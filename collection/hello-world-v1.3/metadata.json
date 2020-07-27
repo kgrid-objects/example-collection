@@ -7,7 +7,7 @@
   "description":"An example of bundled KO",
   "keywords":["Hello","example"],
   "hasServiceSpecification": "service.yaml",
-  "hasDeploymentSpecification": "service.yaml",
+  "hasDeploymentSpecification": "deployment.yaml",
   "hasPayload": "dist/main.js",
   "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }

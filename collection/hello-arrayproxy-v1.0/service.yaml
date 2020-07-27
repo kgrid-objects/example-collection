@@ -36,14 +36,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
-      x-kgrid-activation:
-        artifact:
-          - 'src/welcome.js'
-          - 'src/greeting.json'
-        adapter: 'PROXY'
-        engine: 'node'
-        entry: 'src/welcome.js'
-        function: 'welcome'
 components:
   schemas:
     user:

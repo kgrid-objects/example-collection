@@ -7,7 +7,7 @@
     "description" : "Dalcetrapib ADCY9 Intepretation",
     "keywords" : ["Dalcetrapib", "ADCY9"],
     "hasServiceSpecification": "service.yaml",
-    "hasDeploymentSpecification": "service.yaml",
+    "hasDeploymentSpecification": "deployment.yaml",
     "hasPayload": "rs1967309interpret.js",
     "@context": [
         "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"

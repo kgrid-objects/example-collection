@@ -44,10 +44,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
-      x-kgrid-activation:
-        artifact: bmi.js
-        adapter: JAVASCRIPT
-        function: bmicalc
 components:
   schemas:
     measures:

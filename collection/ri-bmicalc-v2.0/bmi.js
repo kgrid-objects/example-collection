@@ -3,5 +3,3 @@ function bmicalc(inputs){
   weight = inputs.weight;
   return weight/Math.pow(height, 2);
 }
-
-// module.exports = bmicalc

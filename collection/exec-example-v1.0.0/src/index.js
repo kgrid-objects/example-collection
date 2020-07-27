@@ -22,7 +22,7 @@ function execute(inputs){
       request.name=inputs.name+"-"+i;
       request.correlation=correlation;
 
-      let stepExecutor = context.getExecutor("exec-step/v1.0.0/welcome");
+      let stepExecutor = context.getExecutor("exec-step-v1.0.0/welcome");
       let stepResponse = stepExecutor.execute(request);
 
       let step = {};

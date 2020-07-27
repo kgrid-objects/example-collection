@@ -48,10 +48,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/error'
-      x-kgrid-activation:
-        artifact: rs1967309interpret.js
-        adapter: JAVASCRIPT
-        function: rs1967309interpret
+
 components:
   schemas:
     input:

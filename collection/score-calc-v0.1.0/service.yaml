@@ -41,10 +41,7 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
-      x-kgrid-activation:
-        artifact: score.js
-        adapter: JAVASCRIPT
-        function: score
+
 components:
   schemas:
     input:

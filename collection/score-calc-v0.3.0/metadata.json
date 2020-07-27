@@ -7,7 +7,7 @@
   "description" : "Estimating ten-year risk of fatal cardiovascular disease based on SCORE project. This version bundled the javascript code with externalized data files and a Node.js library of 'lodash'",
   "keywords" : ["SCORE, ten-year", "Cardiovascular risk", "calculation"],
   "hasServiceSpecification" : "service.yaml",
-  "hasDeploymentSpecification": "service.yaml",
+  "hasDeploymentSpecification": "deployment.yaml",
   "hasPayload": "dist/main.js",
   "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }

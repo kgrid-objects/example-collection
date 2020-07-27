@@ -44,10 +44,6 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
-      x-kgrid-activation:
-        artifact: dist/main.js
-        adapter: JAVASCRIPT
-        function: welcome
 components:
   schemas:
     input:

@@ -31,13 +31,7 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
-      x-kgrid-activation:
-        adapter: 'PROXY'
-        engine: 'node'
-        entry: 'src/index.js'
-        function: 'process'
-        artifact:
-          - src/index.js
+
 components:
   schemas:
     input:

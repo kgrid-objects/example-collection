@@ -18,8 +18,9 @@ function welcome(inputs) {
     hi = hello.data[index].hello
   }
 
-  return lib.sayHi(hi,inputs.name)
+  return lib.sayHi(hi,   globals.threadsafe)
 
 }
 
+var globals ={};
 module.exports= welcome;

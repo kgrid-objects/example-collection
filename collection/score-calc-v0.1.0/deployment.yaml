@@ -1,0 +1,5 @@
+endpoints:
+  /score:
+    artifact: score.js
+    adapter: JAVASCRIPT
+    function: score

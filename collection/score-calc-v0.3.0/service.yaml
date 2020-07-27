@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /score/calc/v0.3.0
+  - url: /score/calc
     description: SCORE risk calculation.
 tags:
   - name: KO Endpoints
@@ -44,10 +44,6 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
-      x-kgrid-activation:
-        artifact: dist/main.js
-        adapter: JAVASCRIPT
-        function: score
 components:
   schemas:
     input:
