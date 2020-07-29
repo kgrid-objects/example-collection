@@ -1,0 +1,18 @@
+{
+  "manifest": [
+    "file:99999-fk4n99hh99-v0.0.2.zip",
+    "file:exec-example-v1.0.0.zip",
+    "file:exec-step-v1.0.0.zip",
+    "file:hello-arrayproxy-v1.0.zip",
+    "file:hello-proxy-v1.0.zip",
+    "file:hello-world-v1.0.zip",
+    "file:hello-world-v1.3.zip",
+    "file:hello-worldV8-v1.0.zip",
+    "file:proxy-bmicalc-v2.0.zip",
+    "file:proxy-executive-1.0.0.zip",
+    "file:ri-bmicalc-v2.0.zip",
+    "file:score-calc-v0.1.0.zip",
+    "file:score-calc-v0.2.0.zip",
+    "file:score-calc-v0.3.0.zip"
+  ]
+}
