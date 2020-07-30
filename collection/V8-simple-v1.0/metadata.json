@@ -1,7 +1,8 @@
 {
-  "@id" : "ark:/V8/simple",
+  "@id" : "V8-simple",
   "@type" : "koio:KnowledgeObject",
   "title" : "the best hello world ever",
+  "identifier" : "ark:/V8/simple",
   "version" : "v1.0",
   "description" : "A V8 object with one artifact",
   "contributors" : "Kgrid Team",
