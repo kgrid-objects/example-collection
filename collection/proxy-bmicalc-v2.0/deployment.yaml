@@ -1,8 +1,0 @@
-endpoints:
-  /bmicalc:
-    artifact:
-      - 'bmi.js'
-    adapter: 'PROXY'
-    engine: 'node'
-    entry: 'bmi.js'
-    function: 'bmicalc'
