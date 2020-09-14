@@ -4,7 +4,7 @@ info:
   title: 'Hello, World'
   description: 'hello world arrayproxy'
 servers:
-  - url: '/hello/arrayproxy/v1.0/'
+  - url: '/proxy/multiartifact/v1.0'
     description: Hello world
 tags:
   - name: KO Endpoints

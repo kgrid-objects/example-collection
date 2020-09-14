@@ -4,7 +4,7 @@ info:
   title: Executive Object Example
   description: An example object demonstrating the capability of calling other objects
 servers:
-  - url: /proxy/executive
+  - url: /proxy/executive/v1.0
     description: Executive Object Example
 paths:
   /process:

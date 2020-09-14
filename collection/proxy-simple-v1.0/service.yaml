@@ -4,7 +4,7 @@ info:
   title: 'Hello, World'
   description: 'hello world proxy'
 servers:
-  - url: '/hello/proxy/v1.0/'
+  - url: '/proxy/simple/v1.0'
     description: Hello world
 tags:
   - name: KO Endpoints
