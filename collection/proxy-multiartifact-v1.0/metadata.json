@@ -1,7 +1,7 @@
 {
-  "@id" : "proxy-multiartifact",
+  "@id" : "proxy/multiartifact/v1.0",
   "@type" : "koio:KnowledgeObject",
-  "identifier" : "ark:/proxy/multiartifact",
+  "identifier" : "ark:/proxy/multiartifact/v1.0",
   "title" : "the best hello world ever",
   "version" : "v1.0",
   "description": "A native node js object run through the proxy adapter with multiple artifacts",

@@ -1,11 +1,11 @@
 {
   "manifest": [
-    "file:js-bundled-v1.0.zip",
-    "file:js-executive-v1.0.zip",
-    "file:js-simple-v1.0.zip",
-    "file:proxy-executive-v1.0.zip",
-    "file:proxy-multiartifact-v1.0.zip",
-    "file:proxy-simple-v1.0.zip",
-    "file:V8-simple-v1.0.zip"
+    "js-bundled-v1.0.zip",
+    "js-executive-v1.0.zip",
+    "js-simple-v1.0.zip",
+    "proxy-executive-v1.0.zip",
+    "proxy-multiartifact-v1.0.zip",
+    "proxy-simple-v1.0.zip",
+    "V8-simple-v1.0.zip"
   ]
 }

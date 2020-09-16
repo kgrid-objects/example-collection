@@ -1,8 +1,8 @@
 {
-  "@id" : "proxy-simple",
+  "@id" : "proxy/simple/v1.0",
   "@type" : "koio:KnowledgeObject",
   "title" : "the best hello world ever",
-  "identifier" : "ark:/proxy/simple",
+  "identifier" : "ark:/proxy/simple/v1.0",
   "version" : "v1.0",
   "description" : "A native node js object run through the proxy adapter with one artifact",
   "contributors" : "Kgrid Team",

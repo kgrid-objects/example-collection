@@ -1,7 +1,7 @@
 {
-  "@id": "js-bundled",
+  "@id": "js/bundled/v1.0",
   "@type":"koio:KnowledgeObject",
-  "identifier": "ark:/js/bundled",
+  "identifier": "ark:/js/bundled/v1.0",
   "version":"v1.0",
   "title": "Implementation of bundled Hello KGrid",
   "description":"An example of bundled KO",

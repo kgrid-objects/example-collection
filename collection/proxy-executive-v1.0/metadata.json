@@ -1,7 +1,7 @@
 {
-  "@id": "proxy-executive",
+  "@id": "proxy/executive/v1.0",
   "@type": "koio:KnowledgeObject",
-  "identifier": "ark:/proxy/executive",
+  "identifier": "ark:/proxy/executive/v1.0",
   "version": "v1.0",
   "title": "Sample Executive Object to be activated in the remote NodeJS runtime",
   "contributors": "Kgrid Team",
