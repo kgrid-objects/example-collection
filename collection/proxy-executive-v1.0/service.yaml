@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  version: 1.0
+  version: '1.0'
   title: Executive Object Example
   description: An example object demonstrating the capability of calling other objects
 servers:

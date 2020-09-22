@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  version: 1.0
+  version: '1.0'
   title: New Hello world
   description: Hello world v1.0 with webpack-built payload
   license:

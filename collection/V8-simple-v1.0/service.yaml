@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  version: 1.0
+  version: '1.0'
   title: Hello World V8
   description: Hello world v1.0 with for V8 Adapter
   license:

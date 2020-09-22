@@ -1,6 +1,6 @@
 async function process(inputs) {
     // Use arkid, version, path
-    var hello = global.cxt.getExecutorByID("ark:/proxy/simple/v1.0", "v1.0", "welcome")
+    var hello = global.cxt.getExecutorByID("ark:/proxy/simple/1.0", "1.0", "welcome")
 
     var results = {}
     if (hello != null) {
