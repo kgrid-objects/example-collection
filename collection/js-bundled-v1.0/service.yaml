@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  version: '1.0'
+  version: 1.0
   title: New Hello world
   description: Hello world v1.0 with webpack-built payload
   license:
@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /js/bundled/v1.0
+  - url: /js/bundled/1.0
     description: Hello world
 tags:
   - name: KO Endpoints

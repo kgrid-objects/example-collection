@@ -1,10 +1,10 @@
 openapi: 3.0.2
 info:
-  version: 1.0.0
+  version: 1.0
   title: 'Hello, world'
   description: hello world
 servers:
-  - url: /js/simple/v1.0
+  - url: /js/simple/1.0
     description: Hello world
 tags:
   - name: KO Endpoints
