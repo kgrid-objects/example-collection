@@ -1,5 +1,5 @@
 /welcome:
   post:
     artifact: src/index.js
-    engine: JAVASCRIPT
+    engine: javascript
     function: welcome
