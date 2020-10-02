@@ -1,5 +1,5 @@
-endpoints:
-  /execute:
-    adapter: JAVASCRIPT
+/execute:
+  post:
+    engine: javascript
     artifact: src/index.js
     function: main

@@ -1,5 +1,5 @@
-endpoints:
-  /welcome:
+/welcome:
+  post:
     artifact: src/index.js
-    adapter: V8
+    engine: javascript
     function: welcome

@@ -1,9 +1,8 @@
-endpoints:
-  /welcome:
+/welcome:
+  post:
     artifact:
-      - 'src/welcome.js'
-      - 'src/greeting.json'
-    adapter: 'PROXY'
-    engine: 'node'
-    entry: 'src/welcome.js'
-    function: 'welcome'
+      - src/welcome.js
+      - src/greeting.json
+    engine: node
+    entry: src/welcome.js
+    function: welcome
