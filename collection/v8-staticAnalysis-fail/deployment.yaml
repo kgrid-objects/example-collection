@@ -1,0 +1,4 @@
+/welcome:
+  post:
+    engine: javascript
+    function: welcome
