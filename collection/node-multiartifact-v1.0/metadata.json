@@ -1,0 +1,14 @@
+{
+  "@id" : "node/multiartifact/v1.0",
+  "@type" : "koio:KnowledgeObject",
+  "identifier" : "ark:/node/multiartifact/v1.0",
+  "title" : "Multi artifact node Hello World",
+  "version" : "v1.0",
+  "description": "A native node js object run through the proxy adapter with multiple artifacts",
+  "contributors" : "Kgrid Team",
+  "keywords" : [ "Hello", "example" ],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification" : "deployment.yaml",
+  "hasPayload" : "src/index.js",
+  "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}

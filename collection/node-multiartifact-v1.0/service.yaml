@@ -2,9 +2,9 @@ openapi: 3.0.0
 info:
   version: '1.0'
   title: 'Hello, World'
-  description: 'hello world arrayproxy'
+  description: 'A simple hello world in node with multiple artifacts'
 servers:
-  - url: /proxy/multiartifact/1.0
+  - url: /node/multiartifact/1.0
     description: Hello world
 tags:
   - name: KO Endpoints

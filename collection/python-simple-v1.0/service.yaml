@@ -2,9 +2,9 @@ openapi: 3.0.0
 info:
   version: '1.0'
   title: 'Hello, World'
-  description: 'hello world proxy'
+  description: 'hello world python'
 servers:
-  - url: /proxy/simple/1.0
+  - url: /python/simple/1.0
     description: Hello world
 tags:
   - name: KO Endpoints
@@ -44,7 +44,7 @@ components:
       properties:
         name:
           type: string
-          example: 'Bob'
+          example: 'Severus'
     welcomeOutput:
       required:
         - result
