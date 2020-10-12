@@ -2,6 +2,7 @@
   post:
     artifact:
       - src/welcome.py
+      - requirements.txt
     engine: python
     entry: src/welcome.py
     function: welcome
