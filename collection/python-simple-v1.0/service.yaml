@@ -41,10 +41,14 @@ components:
     user:
       required:
         - name
+        - spaces
       properties:
         name:
           type: string
           example: 'Severus'
+        spaces:
+          type: integer
+          example: 10
     welcomeOutput:
       required:
         - result
