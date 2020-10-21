@@ -1,0 +1,7 @@
+/welcome:
+  post:
+    artifact:
+      - src/exec.py
+    engine: python
+    entry: src/exec.py
+    function: execute

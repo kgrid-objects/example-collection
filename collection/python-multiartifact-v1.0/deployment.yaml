@@ -1,0 +1,9 @@
+/welcome:
+  post:
+    artifact:
+      - src/welcome.py
+      - src/main.py
+      - requirements.txt
+    engine: python
+    entry: src/main.py
+    function: generate_page

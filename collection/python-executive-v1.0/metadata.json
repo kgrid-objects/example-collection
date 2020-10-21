@@ -1,0 +1,14 @@
+{
+  "@id" : "python/executive/v1.0",
+  "@type" : "koio:KnowledgeObject",
+  "title" : "Simple Executive Python KO Example",
+  "identifier" : "ark:/python/executive/v1.0",
+  "version" : "v1.0",
+  "description" : "A python object that calls another python object",
+  "contributors" : "Kgrid Team",
+  "keywords" : [ "Hello", "example" ],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification" : "deployment.yaml",
+  "hasPayload" : "src/exec.py",
+  "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}

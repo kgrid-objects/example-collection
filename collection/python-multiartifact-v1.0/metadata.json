@@ -1,0 +1,14 @@
+{
+  "@id" : "python/multiartifact/v1.0",
+  "@type" : "koio:KnowledgeObject",
+  "title" : "Python Multiartifact KO example",
+  "identifier" : "ark:/python/multiartifact/v1.0",
+  "version" : "v1.0",
+  "description" : "A python object with a multiple artifacts",
+  "contributors" : "Kgrid Team",
+  "keywords" : [ "Hello", "example" ],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification" : "deployment.yaml",
+  "hasPayload" : "src/main.py",
+  "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}
