@@ -73,6 +73,7 @@ components:
           example: 'Bob'
     input-plain:
       type: string
+      example: 'Mike Truk'
     output:
       required:
         - result

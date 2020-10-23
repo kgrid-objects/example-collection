@@ -1,7 +1,7 @@
 {
   "@id" : "python/multimime/v1.0",
   "@type" : "koio:KnowledgeObject",
-  "title" : "Simple Python KO example",
+  "title" : "Python KO with multiple endpoints",
   "identifier" : "ark:/python/multimime/v1.0",
   "version" : "v1.0",
   "description" : "A python object with a simple artifact with multiple mimetypes",

@@ -77,6 +77,7 @@ components:
           example: 10
     input-plain:
       type: string
+      example: "\"{'name':'Stephanie','spaces':100}\""
     output:
       required:
         - result
