@@ -1,0 +1,10 @@
+/welcome:
+  post:
+    artifact: src/index.js
+    engine: javascript
+    function: welcome
+/welcome-plain:
+  post:
+    artifact: src/index.js
+    engine: javascript
+    function: welcome

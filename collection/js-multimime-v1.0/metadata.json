@@ -1,0 +1,13 @@
+{
+  "@id": "js/multimime/v1.0",
+  "@type":"koio:KnowledgeObject",
+  "identifier": "ark:/js/multimime/v1.0",
+  "version":"v1.0",
+  "title": "Hello world",
+  "description":"An example of Knowledge Object with multiple mime types",
+  "keywords":["Hello","example"],
+  "hasServiceSpecification": "service.yaml",
+  "hasDeploymentSpecification": "deployment.yaml",
+  "hasPayload": "src/index.js",
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}

@@ -1,0 +1,14 @@
+/welcome:
+  post:
+    artifact:
+      - src/welcome.js
+    engine: node
+    entry: src/welcome.js
+    function: welcome
+/welcome-plain:
+  post:
+    artifact:
+      - src/welcome.js
+    engine: node
+    entry: src/welcome.js
+    function: welcome
