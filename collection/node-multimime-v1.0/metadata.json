@@ -1,14 +1,14 @@
 {
-  "@id" : "V8/simple/v1.0",
+  "@id" : "node/multimime/v1.0",
   "@type" : "koio:KnowledgeObject",
   "title" : "the best hello world ever",
-  "identifier" : "ark:/V8/simple/v1.0",
+  "identifier" : "ark:/node/multimime/v1.0",
   "version" : "v1.0",
-  "description" : "A V8 object with one artifact",
+  "description" : "A native node js object run through the proxy adapter with multiple mime types",
   "contributors" : "Kgrid Team",
   "keywords" : [ "Hello", "example" ],
   "hasServiceSpecification" : "service.yaml",
   "hasDeploymentSpecification" : "deployment.yaml",
-  "hasPayload" : "src/index.js",
+  "hasPayload" : "src/welcome.js",
   "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
 }

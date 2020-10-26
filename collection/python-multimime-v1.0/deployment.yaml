@@ -1,0 +1,16 @@
+/welcome:
+  post:
+    artifact:
+      - src/welcome.py
+      - requirements.txt
+    engine: python
+    entry: src/welcome.py
+    function: welcome
+/welcome-plain:
+  post:
+    artifact:
+      - src/welcome.py
+      - requirements.txt
+    engine: python
+    entry: src/welcome.py
+    function: welcome

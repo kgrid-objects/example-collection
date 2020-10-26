@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  version: '1.0'
+  title: 'Hello, World'
+  description: 'hello world python'
+servers:
+  - url: /python/multimime/1.0
+    description: Hello world
+tags:
+  - name: KO Endpoints
+    description: Hello World Endpoints
+paths:
+  /welcome:
+    post:
+      tags:
+        - KO Endpoints
+      description: Welcome.
+      operationId: welcome
+      requestBody:
+        description: inputs
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/input'
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/output'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /welcome-plain:
+    post:
+      tags:
+        - KO Endpoints
+      description: Welcome.
+      operationId: welcome-plain
+      requestBody:
+        description: inputs
+        required: true
+        content:
+          text/plain:
+            schema:
+              $ref: '#/components/schemas/input-plain'
+      responses:
+        '200':
+          description: response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/output'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+components:
+  schemas:
+    input:
+      required:
+        - name
+        - spaces
+      properties:
+        name:
+          type: string
+          example: 'Severus'
+        spaces:
+          type: integer
+          example: 10
+    input-plain:
+      type: string
+      example: "\"{'name':'Stephanie','spaces':100}\""
+    output:
+      required:
+        - result
+      properties:
+        result:
+          type: string
+          example: 'welcome'
+    error:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
