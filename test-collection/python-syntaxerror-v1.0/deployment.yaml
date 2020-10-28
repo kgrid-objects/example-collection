@@ -1,0 +1,7 @@
+/welcome:
+  post:
+    artifact:
+      - src/welcome.py
+    engine: python
+    entry: src/welcome.py
+    function: welcome
