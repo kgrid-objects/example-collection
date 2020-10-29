@@ -1,0 +1,14 @@
+{
+  "@id" : "js/syntaxerror/v1.0",
+  "@type" : "koio:KnowledgeObject",
+  "title" : "syntaxerror js KO example",
+  "identifier" : "ark:/js/syntaxerror/v1.0",
+  "version" : "v1.0",
+  "description" : "A js object with a syntaxerror artifact",
+  "contributors" : "Kgrid Team",
+  "keywords" : [ "Hello", "example" ],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification" : "deployment.yaml",
+  "hasPayload" : "src/syntaxError.js",
+  "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}

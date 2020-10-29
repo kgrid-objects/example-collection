@@ -1,0 +1,7 @@
+/welcome:
+  post:
+    artifact:
+      - src/syntaxError.js
+    engine: javascript
+    entry: src/syntaxError.js
+    function: welcome
