@@ -1,5 +1,5 @@
 async function process(inputs) {
-    var hello = global.cxt.getExecutorByID("proxy/simple/1.0/welcome")
+    var hello = global.cxt.getExecutorByID("node/simple/1.0/welcome")
 
     var results = {}
     if (hello != null) {
