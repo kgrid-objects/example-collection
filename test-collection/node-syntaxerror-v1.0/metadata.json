@@ -1,0 +1,14 @@
+{
+  "@id" : "node/syntaxerror/v1.0",
+  "@type" : "koio:KnowledgeObject",
+  "title" : "the best hello world ever",
+  "identifier" : "ark:/node/syntaxerror/v1.0",
+  "version" : "v1.0",
+  "description" : "A native node js object run through the proxy adapter with one artifact",
+  "contributors" : "Kgrid Team",
+  "keywords" : [ "Hello", "example" ],
+  "hasServiceSpecification" : "service.yaml",
+  "hasDeploymentSpecification" : "deployment.yaml",
+  "hasPayload" : "src/welcome.js",
+  "@context" : [ "http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}
