@@ -2,6 +2,7 @@
   post:
     artifact:
       - src/welcome.js
+      - package.json
     engine: node
     entry: src/welcome.js
     function: welcome
