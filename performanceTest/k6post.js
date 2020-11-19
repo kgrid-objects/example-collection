@@ -9,7 +9,7 @@ let okRate = new Rate('Percentage ok');
 export default function() {
   var url = __ENV.URL;
   var payload = JSON.stringify({
-    name: "Steve"
+    name: "Steve", spaces: 10
   });
   var params =  { headers: { "Content-Type": "application/json" } }
 
