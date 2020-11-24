@@ -1,0 +1,18 @@
+{
+  "@id": "resource/simple/v1.0",
+  "@type": "koio:KnowledgeObject",
+  "identifier": "ark:/resource/simple/v1.0",
+  "version": "v1.0",
+  "title": "Hello world",
+  "description": "An example of simple resource Knowledge Object",
+  "keywords": [
+    "Hello",
+    "example"
+  ],
+  "hasServiceSpecification": "service.yaml",
+  "hasDeploymentSpecification": "deployment.yaml",
+  "hasPayload": "src/text.txt",
+  "@context": [
+    "http://kgrid.org/koio/contexts/knowledgeobject.jsonld"
+  ]
+}

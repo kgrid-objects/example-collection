@@ -1,0 +1,6 @@
+/welcome:
+  get:
+    artifact:
+      - "src/hello.txt"
+    engine: "resource"
+
