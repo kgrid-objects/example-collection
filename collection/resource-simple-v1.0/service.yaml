@@ -38,15 +38,6 @@ paths:
                 $ref: '#/components/schemas/error'
 components:
   schemas:
-    input:
-      required:
-        - name
-      properties:
-        name:
-          type: string
-          x-kgrid-label: 'Please enter your name'
-          x-kgrid-unit: ''
-          example: Bob
     output:
       required:
         - result

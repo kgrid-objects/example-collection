@@ -2,5 +2,6 @@
   get:
     artifact:
       - "src/hello.txt"
+      - "src/goodbye.txt"
     engine: "resource"
 
