@@ -1,6 +1,19 @@
+/welcome/src/text.txt:
+  get:
+    artifact:
+      - "src/text.txt"
+    engine: "resource"
+
+/welcome/src/goodbye.txt:
+  get:
+    artifact:
+      - "src/goodbye.txt"
+    engine: "resource"
+
 /welcome:
   get:
     artifact:
-      - "src/hello.txt"
+      - "src/goodbye.txt"
+      - "src/text.txt"
     engine: "resource"
 

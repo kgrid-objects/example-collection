@@ -15,19 +15,50 @@ paths:
       tags:
         - KO Endpoints
       description: Welcome.
-      operationId: welcome
-      requestBody:
-        description: inputs
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/input'
+      operationId: welcome-list
       responses:
         '200':
           description: response
           content:
             application/json:
+              schema:
+                $ref: '#/components/schemas/output'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /welcome/src/text.txt:
+    get:
+      tags:
+        - KO Endpoints
+      description: Welcome.
+      operationId: welcome-text
+      responses:
+        '200':
+          description: response
+          content:
+            application/octet-stream:
+              schema:
+                $ref: '#/components/schemas/output'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /welcome/src/goodbye.txt:
+    get:
+      tags:
+        - KO Endpoints
+      description: Welcome.
+      operationId: goodbye-text
+      responses:
+        '200':
+          description: response
+          content:
+            application/octet-stream:
               schema:
                 $ref: '#/components/schemas/output'
         default:
