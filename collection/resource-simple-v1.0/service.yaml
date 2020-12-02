@@ -4,7 +4,7 @@ info:
   title: 'Hello, world'
   description: hello world
 servers:
-  - url: /resource/simple/1.0
+  - url: /resource/simple
     description: Hello world
 tags:
   - name: KO Endpoints
@@ -12,6 +12,14 @@ tags:
 paths:
   /welcome:
     get:
+      parameters:
+        - in: query
+          name: v
+          schema:
+            type: string
+            example: '1.0'
+          required: true
+          description: the api version of the endpoint
       tags:
         - KO Endpoints
       description: Welcome.
@@ -31,6 +39,14 @@ paths:
                 $ref: '#/components/schemas/error'
   /welcome/src/text.txt:
     get:
+      parameters:
+        - in: query
+          name: v
+          schema:
+            type: string
+            example: '1.0'
+          required: true
+          description: the api version of the endpoint
       tags:
         - KO Endpoints
       description: Welcome.
@@ -50,6 +66,14 @@ paths:
                 $ref: '#/components/schemas/error'
   /welcome/src/goodbye.txt:
     get:
+      parameters:
+        - in: query
+          name: v
+          schema:
+            type: string
+            example: '1.0'
+          required: true
+          description: the api version of the endpoint
       tags:
         - KO Endpoints
       description: Welcome.
