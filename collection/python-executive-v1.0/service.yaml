@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   version: '1.0'
-  title: 'Hello, World'
-  description: 'hello world python'
+  title: 'Simple Executive Python KO Example'
+  description: 'A python object that calls another python object'
 servers:
   - url: /python/executive/1.0
     description: Hello world

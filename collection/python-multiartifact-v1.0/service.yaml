@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   version: '1.0'
-  title: 'Hello, World'
-  description: 'hello world multiartifact python'
+  title: 'Python Multiartifact KO example'
+  description: 'A python object with a multiple artifacts'
 servers:
   - url: /python/multiartifact/1.0
     description: Hello world

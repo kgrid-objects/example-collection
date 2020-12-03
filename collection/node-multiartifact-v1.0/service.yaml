@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   version: '1.0'
-  title: 'Hello, World'
-  description: 'A simple hello world in node with multiple artifacts'
+  title: 'Multi artifact node Hello World'
+  description: 'A native node js object run through the proxy adapter with multiple artifacts'
 servers:
   - url: /node/multiartifact/1.0
     description: Hello world

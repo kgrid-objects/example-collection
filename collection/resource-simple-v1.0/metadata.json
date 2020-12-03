@@ -3,7 +3,7 @@
   "@type": "koio:KnowledgeObject",
   "identifier": "ark:/resource/simple/v1.0",
   "version": "v1.0",
-  "title": "Hello world",
+  "title": "Resource KO Example",
   "description": "An example of simple resource Knowledge Object",
   "keywords": [
     "Hello",

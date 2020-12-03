@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   version: '1.0'
-  title: 'Hello, World'
-  description: 'hello world python'
+  title: 'Simple Python KO example'
+  description: 'A python object with a simple artifact'
 servers:
   - url: /python/simple/1.0
     description: Hello world

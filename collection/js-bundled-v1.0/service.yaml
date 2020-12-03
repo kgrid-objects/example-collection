@@ -1,8 +1,8 @@
 openapi: 3.0.2
 info:
   version: '1.0'
-  title: New Hello world
-  description: Hello world v1.0 with webpack-built payload
+  title: Implementation of bundled Hello KGrid
+  description: An example of bundled KO
   license:
     name: GNU General Public License v3 (GPL-3)
     url: >-

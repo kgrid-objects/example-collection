@@ -1,8 +1,8 @@
 openapi: 3.0.2
 info:
   version: '1.0'
-  title: Executive Object Example Node
-  description: An example object demonstrating the capability of calling other objects in node
+  title: Sample Executive Object to be activated in the remote NodeJS runtime
+  description: Executive Object to call context to retrieve executor
 servers:
   - url: /node/executive/1.0
     description: Executive Object Example

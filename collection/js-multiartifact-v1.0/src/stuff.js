@@ -1,3 +1,0 @@
-function getTheWordStuff(){
-    return 'stuff'
-}

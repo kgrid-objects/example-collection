@@ -1,10 +1,10 @@
 openapi: 3.0.2
 info:
   version: '1.0'
-  title: 'Hello, world'
-  description: hello world
+  title: 'Resource KO Example'
+  description: An example of simple resource Knowledge Object
 servers:
-  - url: /resource/simple
+  - url: /resource/resource/simple
     description: Hello world
 tags:
   - name: KO Endpoints

@@ -1,8 +1,8 @@
 openapi: 3.0.0
 info:
   version: '1.0'
-  title: 'Hello, World'
-  description: 'A hello world in node with dependencies'
+  title: 'the best hello world ever'
+  description: 'A native node js object run through the proxy adapter with one artifact'
 servers:
   - url: /node/dependencies/1.0
     description: Hello world
