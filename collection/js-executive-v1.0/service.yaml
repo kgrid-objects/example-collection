@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /js/executive/1.0
+  - url: /js/executives
     description: Example Executive Knowledge Object
 tags:
   - name: KO Endpoints
@@ -20,6 +20,8 @@ tags:
 paths:
   /execute:
     post:
+      parameters:
+        - $ref: '#/components/parameters/apiversion'
       tags:
         - KO Endpoints
       description: Executive Knowledge Object execute endpoint.
@@ -37,14 +39,23 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/workresponse'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/error'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
 components:
+  parameters:
+    apiversion:
+      in: query
+      required: false
+      name: v
+      schema:
+        type: string
+        default:
+          $ref: '#/info/version'
   schemas:
     workrequest:
       required:
@@ -61,19 +72,3 @@ components:
         steps:
           type: integer
           example: 5
-    workresponse:
-      required:
-        - result
-      properties:
-        result:
-          type: object
-    error:
-      required:
-        - code
-        - message
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string

@@ -3,12 +3,22 @@ info:
   version: '1.0'
   title: Sample Executive Object to be activated in the remote NodeJS runtime
   description: Executive Object to call context to retrieve executor
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
-  - url: /node/executive/1.0
+  - url: /node/executive
     description: Executive Object Example
 paths:
   /process:
     post:
+      parameters:
+        - $ref: '#/components/parameters/apiversion'
       description: executive object
       operationId: process
       requestBody:
@@ -24,15 +34,23 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/output'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
-
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
 components:
+  parameters:
+    apiversion:
+      in: query
+      required: false
+      name: v
+      schema:
+        type: string
+        default:
+          $ref: '#/info/version'
   schemas:
     input:
       required:
@@ -51,9 +69,3 @@ components:
           type: number
           x-kgrid-unit: kg
           example: 70.2
-    output:
-      required:
-        - result
-      properties:
-        result:
-          type: object

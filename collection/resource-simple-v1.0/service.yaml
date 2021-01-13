@@ -3,6 +3,14 @@ info:
   version: '1.0'
   title: 'Resource KO Example'
   description: An example of simple resource Knowledge Object
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
   - url: /resource/resource/simple
     description: Hello world
@@ -30,13 +38,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/output'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/error'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
   /welcome/src/text.txt:
     get:
       parameters:
@@ -57,13 +65,13 @@ paths:
           content:
             application/octet-stream:
               schema:
-                $ref: '#/components/schemas/output'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/error'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
   /welcome/src/goodbye.txt:
     get:
       parameters:
@@ -84,28 +92,10 @@ paths:
           content:
             application/octet-stream:
               schema:
-                $ref: '#/components/schemas/output'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/error'
-components:
-  schemas:
-    output:
-      required:
-        - result
-      properties:
-        result:
-          type: object
-    error:
-      required:
-        - code
-        - message
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'

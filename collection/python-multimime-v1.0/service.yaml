@@ -3,6 +3,14 @@ info:
   version: '1.0'
   title: 'Python KO with multiple endpoints'
   description: 'A python object with a simple artifact with multiple mimetypes'
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
   - url: /python/multimime/1.0
     description: Hello world
@@ -12,6 +20,8 @@ tags:
 paths:
   /welcome:
     post:
+      parameters:
+        - $ref: '#/components/parameters/apiversion'
       tags:
         - KO Endpoints
       description: Welcome.
@@ -29,15 +39,17 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/output'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/error'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
   /welcome-plain:
     post:
+      parameters:
+        - $ref: '#/components/parameters/apiversion'
       tags:
         - KO Endpoints
       description: Welcome.
@@ -55,14 +67,23 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/output'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/error'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
 components:
+  parameters:
+    apiversion:
+      in: query
+      required: false
+      name: v
+      schema:
+        type: string
+        default:
+          $ref: '#/info/version'
   schemas:
     input:
       required:
@@ -78,20 +99,3 @@ components:
     input-plain:
       type: string
       example: "{'name':'Stephanie','spaces':100}"
-    output:
-      required:
-        - result
-      properties:
-        result:
-          type: string
-          example: 'welcome'
-    error:
-      required:
-        - code
-        - message
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string

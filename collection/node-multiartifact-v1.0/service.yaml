@@ -3,8 +3,16 @@ info:
   version: '1.0'
   title: 'Multi artifact node Hello World'
   description: 'A native node js object run through the proxy adapter with multiple artifacts'
+  license:
+    name: GNU General Public License v3 (GPL-3)
+    url: >-
+      https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)#fulltext
+  contact:
+    name: KGrid Team
+    email: kgrid-developers@umich.edu
+    url: 'http://kgrid.org'
 servers:
-  - url: /node/multiartifact/1.0
+  - url: /node/multiartifact
     description: Hello world
 tags:
   - name: KO Endpoints
@@ -12,6 +20,8 @@ tags:
 paths:
   /welcome:
     post:
+      parameters:
+        - $ref: '#/components/parameters/apiversion'
       tags:
         - KO Endpoints
       description: Welcome.
@@ -29,14 +39,23 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/welcomeOutput'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/error'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
 components:
+  parameters:
+    apiversion:
+      in: query
+      required: false
+      name: v
+      schema:
+        type: string
+        default:
+          $ref: '#/info/version'
   schemas:
     user:
       required:
@@ -48,20 +67,3 @@ components:
         language:
           type: string
           example: 'german'
-    welcomeOutput:
-      required:
-        - result
-      properties:
-        result:
-          type: string
-          example: 'welcome'
-    error:
-      required:
-        - code
-        - message
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string

@@ -3,17 +3,21 @@
     artifact:
       - "src/text.txt"
     engine: "resource"
-
+/welcome/src/js-executive-v1.0.pip:
+  get:
+    artifact:
+      - "src/js-executive-v1.0.pip"
+    engine: "resource"
 /welcome/src/goodbye.txt:
   get:
     artifact:
       - "src/goodbye.txt"
     engine: "resource"
-
 /welcome:
   get:
     artifact:
       - "src/goodbye.txt"
       - "src/text.txt"
+      - "src/js-executive-v1.0.pip"
     engine: "resource"
 

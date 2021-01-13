@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /js/bundled/1.0
+  - url: /js/bundled
     description: Hello world
 tags:
   - name: KO Endpoints
@@ -20,6 +20,8 @@ tags:
 paths:
   /welcome:
     post:
+      parameters:
+        - $ref: '#/components/parameters/apiversion'
       tags:
         - KO Endpoints
       description: Hello
@@ -37,14 +39,23 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/output'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/basicerror.yaml'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
 components:
+  parameters:
+    apiversion:
+      in: query
+      required: false
+      name: v
+      schema:
+        type: string
+        default:
+          $ref: '#/info/version'
   schemas:
     input:
       required:
@@ -69,11 +80,3 @@ components:
           x-kgrid-label: Please select your language
           x-kgrid-unit: ''
           example: Spanish
-    output:
-      required:
-        - result
-      properties:
-        result:
-          type: object
-          additionalProperties:
-            type: object

@@ -5,7 +5,7 @@
   "identifier" : "ark:/node/simple/v1.0",
   "version" : "v1.0",
   "description" : "A native node js object run through the proxy adapter with one artifact",
-  "contributors" : "Kgrid Team",
+  "contributors" : "Kgrid Team Developer",
   "keywords" : [ "Hello", "example" ],
   "hasServiceSpecification" : "service.yaml",
   "hasDeploymentSpecification" : "deployment.yaml",
