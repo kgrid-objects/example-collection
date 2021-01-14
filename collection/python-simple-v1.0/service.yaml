@@ -21,7 +21,7 @@ paths:
   /welcome:
     post:
       parameters:
-        - $ref: '#/components/parameters/apiversion'
+        - $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/parameters/apiversion'
       tags:
         - KO Endpoints
       description: Welcome.
@@ -39,13 +39,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericerror'
 components:
   parameters:
     apiversion:

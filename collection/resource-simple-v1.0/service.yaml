@@ -38,13 +38,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericerror'
   /welcome/src/text.txt:
     get:
       parameters:
@@ -65,13 +65,13 @@ paths:
           content:
             application/octet-stream:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericerror'
   /welcome/src/goodbye.txt:
     get:
       parameters:
@@ -92,10 +92,10 @@ paths:
           content:
             application/octet-stream:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericresponse'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#genericerror'
+                $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericerror'
