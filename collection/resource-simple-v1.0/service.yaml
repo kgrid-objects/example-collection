@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /resource/resource/simple
+  - url: /resource/simple
     description: Hello world
 tags:
   - name: KO Endpoints
@@ -25,7 +25,8 @@ paths:
           name: v
           schema:
             type: string
-            example: '1.0'
+            default:
+              $ref: '#/info/version'
           required: true
           description: the api version of the endpoint
       tags:
