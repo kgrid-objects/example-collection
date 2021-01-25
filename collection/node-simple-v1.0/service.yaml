@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /node/simple/1.0
+  - url: /node/simple
     description: Hello world
 tags:
   - name: KO Endpoints

@@ -12,7 +12,7 @@ info:
     email: kgrid-developers@umich.edu
     url: 'http://kgrid.org'
 servers:
-  - url: /python/multiartifact/1.0
+  - url: /python/multiartifact
     description: Hello world
 tags:
   - name: KO Endpoints
