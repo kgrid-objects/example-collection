@@ -68,11 +68,14 @@ Currently, the KGrid Activator has several adapters that can be used to run know
 Objects. Graal implements [ECMAScript 2020 specification](https://github.com/graalvm/graaljs/blob/master/docs/user/JavaScriptCompatibility.md#ecmascript-language-compliance)
 - The proxy adapter can use our [node.js](https://nodejs.org/en/) [runtime](https://github.com/kgrid/kgrid-node-runtime) which will run javascript in a node.js environment
 and can load external dependencies.
-- The proxy Adapter can also use our [python](https://www.python.org/) [runtime](https://github.com/kgrid/kgrid-python-runtime), which can run python and load python dependencies just like any other python engine
+- The proxy adapter can also use our [python](https://www.python.org/) [runtime](https://github.com/kgrid/kgrid-python-runtime), which can run python and load python dependencies just like any other python engine
 - The Activator also makes use of our [resource adapter](https://github.com/kgrid/resource-adapter) in order to expose resource-based endpoints defined in resource Knowledge Objects.
 
+These are all included in the [KGrid Activator](https://github.com/kgrid/kgrid-activator) project however the runtimes must be run separately to activate objects that require them. 
+
 #### Running Example KOs in an Activator
-You can now test the example objects in an activator. This is done most easily via the [kgrid cli](https://github.com/kgrid/kgrid-cli).
+To try these objects you can either clone this project or download a [released version](https://github.com/kgrid-objects/example-collection/releases) of the objects directly or using a manifest. This is done most easily via the [kgrid cli](https://github.com/kgrid/kgrid-cli).
+
 Download the cli using 
 ```
 npm install -g @kgrid/cli
@@ -88,6 +91,12 @@ npm install -g @kgrid/cli
 to start an activator that loads the example collection. You can then browse the collection by going to 
  [http://localhost:8080](http://localhost:8080)
 
+If you already have an activator you can either run this collection from the source or import the manifest.
+
+To run from source clone this project and set the activator's `kgrid.shelf.cdostore.url` property to point to the `collection` directory. Note that the js-bundled object requires node and you must run `npm run build` inside the object's directory to build the source code into a bundled artifact that can be activated.
+
+To use the manifest setting the `kgrid.shelf.manifest` property in the activator to point to a [released](https://github.com/kgrid-objects/example-collection/releases/tag/4.1.1) manifest.
+
 
 ### Package
 
@@ -96,4 +105,4 @@ into the `/collection` directory and running
 ```
 kgrid package-all
 ```
-This will add a checksum to the deployment spec of each object, which the remote runtimes will optionally use to help with caching.
+This will add a checksum to the deployment spec of each object, which the remote runtimes will optionally use to help with caching in remote environments.
