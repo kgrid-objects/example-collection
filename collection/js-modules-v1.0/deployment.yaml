@@ -1,0 +1,5 @@
+/welcome:
+  post:
+    artifact: src/index.mjs
+    engine: javascript
+    function: welcome

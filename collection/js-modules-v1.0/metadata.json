@@ -1,0 +1,13 @@
+{
+  "@id": "js/modules/v1.0",
+  "@type":"koio:KnowledgeObject",
+  "identifier": "ark:/js/modules/v1.0",
+  "version":"v1.0",
+  "title": "Hello world with modules",
+  "description":"An example of simple Knowledge Object that uses modules",
+  "keywords":["Hello","example"],
+  "hasServiceSpecification": "service.yaml",
+  "hasDeploymentSpecification": "deployment.yaml",
+  "hasPayload": "src/index.js",
+  "@context" : ["http://kgrid.org/koio/contexts/knowledgeobject.jsonld" ]
+}
