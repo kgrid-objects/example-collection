@@ -40,6 +40,9 @@ paths:
             application/json:
               schema:
                 $ref: 'https://demo.kgrid.org/schemas/openapischemas.yaml#/components/schemas/genericresponse'
+            application/json;profile="minimal":
+              schema:
+                type: string
         default:
           description: unexpected error
           content:
