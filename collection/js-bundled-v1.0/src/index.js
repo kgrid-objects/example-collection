@@ -4,16 +4,16 @@ const hello = require("./hello.json")
 
 function welcome(inputs) {
 
-    var index = -1
-    for (var i = 0; i < hello.data.length; i++) {
-        var obj = hello.data[i]
-        var lang = inputs.language || "English"
+    let index = -1
+    for (let i = 0; i < hello.data.length; i++) {
+        let obj = hello.data[i]
+        let lang = inputs.language || "English"
         if (obj.language.toLowerCase() == lang.toLowerCase()) {
             index = i
             break
         }
     }
-    var hi = 'The language is not found. \n Hello'
+    let hi = 'The language is not found. \n Hello'
     if (index != -1) {
         hi = hello.data[index].hello
     }
@@ -22,5 +22,5 @@ function welcome(inputs) {
 
 }
 
-var globals = {};
+let globals = {};
 module.exports = welcome;

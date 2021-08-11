@@ -1,5 +1,5 @@
 function main(inputs) {
-    var stepExecutor = context.getExecutor("js/simple/1.0/welcome");
+    let stepExecutor = context.getExecutor("js/simple/1.0/welcome");
 
     if (stepExecutor != null) {
         return stepExecutor.execute(inputs, "application/json");
