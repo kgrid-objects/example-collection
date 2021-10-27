@@ -4,3 +4,4 @@
 collection/**/dist/**
 docs/**/dist/**
 **/node_modules/**
+package-lock.json
