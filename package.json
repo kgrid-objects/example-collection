@@ -13,7 +13,10 @@
     "url": "https://github.com/kgrid-objects/example-collection/issues"
   },
   "homepage": "https://github.com/kgrid-objects/example-collection#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^9.1.3",
+    "chai": "^4.3.4"
+  },
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
