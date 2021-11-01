@@ -19,10 +19,8 @@
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  },
-  "jest": {
-    "verbose": false
+    "docs:build": "vuepress build docs",
+    "test": "mocha"
   },
   "engines": {
     "node": ">= 8.0.0",
