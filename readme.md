@@ -5,6 +5,7 @@ of the grid, good development practices and useful tools.
 
 ## Tests
 - Tests can be written in the framework of your choice for KOs
+- It is best not to include test files in `deployment.yaml` if they are contained within the KO
 ### Tests in Node
   - Js/Simple has two tests written with mocha and chai: 
   - One at the top level, which can be run with the command `npm test`
