@@ -1,0 +1,59 @@
+{
+	"@context": {
+		"ark": "https://arks.org/js/fno/",
+		"dc": "http://purl.org/dc/elements/1.1/",
+		"fno": "https://w3id.org/function/ontology#",
+		"koio": "http://kgrid.org/koio#",
+		"xsd": "http://www.w3.org/2001/XMLSchema#",
+		"sdo": "http://www.schema.org/",
+		"prov": "http://www.w3.org/ns/prov#",
+		"rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+	},
+	"@graph": [
+		{
+			"@id": "ark:js/fno",
+			"@type": [
+				"fno:Function",
+				"prov:Entity"
+			],
+			"fno:name": "welcome",
+			"fno:returns": {
+				"@id": "ark:welcome/greeting"
+			},
+			"fno:expects": {
+			    "@id":"ark:welcome/input"
+			},
+			"rdfs:label": "Function - Hello World"
+		},
+		{
+		    "@id":"ark:welcome/input",
+		    "@type":"fno:Parameter",
+            "fno:type": "xsd:string",
+            "rdfs:label": "Input Parameter Definition"
+		},
+		{
+			"@id": "ark:welcome/greeting",
+			"@type": "fno:Output",
+			"fno:type": "xsd:string",
+			"fno:predicate": "prov:generated",
+			"rdfs:label": "Output definition"
+		},
+		{
+			"@id": "ark:js/fno/javascript_mapping1",
+			"@type": "fno:Mapping",
+			"fno:Function": {
+				"@id": "ark:js/fno"
+			},
+			"fno:Implementation": {
+				"@id": "ark:js/fno/v1.0"
+			},
+			"rdfs:label": "Javascript Mapping"
+		},
+		{
+			"@id": "ark:js/fno/v1.0",
+			"@type": "fno:Implementation",
+			"dc:version": "v1.0",
+			"rdfs:label": "Javascript Implementation"
+		}
+	]
+}
