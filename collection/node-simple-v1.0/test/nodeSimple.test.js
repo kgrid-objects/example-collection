@@ -1,9 +1,9 @@
 const expect = require('chai').expect;
-const jsSimple = require('../src/index')
+const nodeSimple = require('../src/welcome')
 
 describe('js Simple', ()=>{
     it('should return a greeting with the input name', ()=>{
-        let output = jsSimple({name:'wendy'});
+        let output = nodeSimple({name:'wendy'});
         expect(output).to.be.equal('Welcome to Knowledge Grid, wendy')
     })
 })
