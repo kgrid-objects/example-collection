@@ -15,8 +15,6 @@ of the grid, good development practices and useful tools.
   - This is just to demonstrate that it is possible to have tests for the collection, or individual KOs
   - Before running tests, you must run `npm install`
 ### Tests in Python
-  - The easiest way to test a python KO is by having the test exist right in the src directory with the methods under test.
-    - This is due to python's interpreter and import system
   - `python-simple-v1.0` has an example of a test using `unittest`
   - to run the tests, use `python3 -m unittest python_simple_test.py` in the src directory of the `python-simple-v1.0` KO
 
